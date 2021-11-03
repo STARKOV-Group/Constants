@@ -1,0 +1,80 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "aa401f88-1297-41a2-8fe7-d9763a4d26dd",
+  "Name": "ConstantsEntityValueCollection",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "ConstantsEnti1",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "09341a0f-ae7d-4f8f-a131-af5456fbead7",
+      "Name": "ConstantsEntity",
+      "CanBeSearch": false,
+      "Code": "ConstantsEntit",
+      "EntityGuid": "66bb79ca-2a2c-42c9-9780-25365347c6ac",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "c7fbd02f-65f9-46ac-9cf2-e0de8c2f5d1a",
+      "Name": "ValueString",
+      "CanBeSearch": false,
+      "Code": "ValueString",
+      "IsVisibility": false,
+      "Length": 500,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+      "PreviousPropertyGuid": "09341a0f-ae7d-4f8f-a131-af5456fbead7"
+    },
+    {
+      "$type": "Sungero.Metadata.IntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "7a19acee-652e-4b81-a124-833ecff1a391",
+      "Name": "ValueInt",
+      "CanBeSearch": false,
+      "Code": "ValueInt",
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "c7fbd02f-65f9-46ac-9cf2-e0de8c2f5d1a"
+    },
+    {
+      "$type": "Sungero.Metadata.DoublePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "b20641e0-9ccd-421e-a5a9-3145a1809dfb",
+      "Name": "ValueDouble",
+      "CanBeSearch": false,
+      "Code": "ValueDouble",
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "7a19acee-652e-4b81-a124-833ecff1a391"
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "5d5db612-9d51-4609-9f50-48c0eef106d9",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "56735f34-c048-41da-9fd7-922a07f9791b",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

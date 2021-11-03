@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <ViewName>Default</ViewName>
+  <Collection614f51cbf6684ee480ea1ad1b99ee842 FormGuid="df8649cf-9830-4b50-a826-fbe19ca2545d">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="View" isnull="true" iskey="true">
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">1014,-2</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AutoWidth">false</property>
+          <property name="AllowGrouping">false</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="AllowSorting">true</property>
+          <property name="ShowTotalSummary">false</property>
+          <property name="AllowMoveColumnToDropArea">false</property>
+          <property name="AllowColumnMoving">true</property>
+          <property name="IsRowCellMenuEnabled">false</property>
+          <property name="LinesPerRowMode">None</property>
+        </property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="GroupCount">0</property>
+        <property name="Columns" iskey="true" value="3">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="FieldName">ValueString</property>
+            <property name="Name">ConstantsEntity_ValueCollection_ValueString</property>
+            <property name="VisibleIndex">0</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="FieldName">ValueInt</property>
+            <property name="Name">ConstantsEntity_ValueCollection_ValueInt</property>
+            <property name="VisibleIndex">1</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="FieldName">ValueDouble</property>
+            <property name="Name">ConstantsEntity_ValueCollection_ValueDouble</property>
+            <property name="VisibleIndex">2</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+        </property>
+        <property name="SortInfo" iskey="true" value="0" />
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collection614f51cbf6684ee480ea1ad1b99ee842>
+</settings>

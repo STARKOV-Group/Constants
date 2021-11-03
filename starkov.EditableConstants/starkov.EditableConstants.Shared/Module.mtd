@@ -1,0 +1,1441 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "6aa45954-7357-418e-b765-ab96cd52a3d5",
+  "Name": "EditableConstants",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "starkov.EditableConstants.Client",
+  "ClientBaseAssemblyName": "starkov.EditableConstants.ClientBase",
+  "ClientBaseNamespace": "starkov.EditableConstants.ClientBase",
+  "ClientNamespace": "starkov.EditableConstants.Client",
+  "Code": "Editabl",
+  "CompanyCode": "starkov",
+  "Cover": {
+    "NameGuid": "5625c9de-b988-4dc1-97f2-55895bf448cd",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "8d7a47b6-243a-4a72-b98c-bca56f4715ef",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "3967761a-ff1a-4732-a765-d64a19694ec7",
+      "BackgroundPosition": "Stretch"
+    }
+  },
+  "Dependencies": [
+    {
+      "Id": "3293e057-599d-4248-827e-1ff462bc291b",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "92491aa6-c4df-4f46-a807-ebdd337bda74",
+      "MaxVersion": "",
+      "MinVersion": "1.0.0.0"
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "IsVisible": false,
+      "ItemId": "66bb79ca-2a2c-42c9-9780-25365347c6ac"
+    },
+    {
+      "ItemId": "a1c2c596-9b78-4767-8ba4-8b63e2976e2f",
+      "PreviousItemId": "66bb79ca-2a2c-42c9-9780-25365347c6ac"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InitializationFunctions": [
+    {
+      "Name": "CreateBase64Constants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValue",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValue",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValue",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "isText",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValue",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValue",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValue",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValueFrom",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "constantValueBy",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValueFrom",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "constantValueBy",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValuesList",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.String>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValuesList",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int32>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValuesList",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Double>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateGroup",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "GetNewConstant",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "typeValue",
+          "ParameterType": "global::Sungero.Core.Enumeration",
+          "ParameterTypeFullName": "Sungero.Core.Enumeration, Sungero.Domain.Shared"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::starkov.EditableConstants.IConstantsEntity",
+      "ReturnTypeFullName": "starkov.EditableConstants.IConstantsEntity, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GrantRightsOnConstants",
+      "Parameters": [
+        {
+          "Name": "users",
+          "ParameterType": "global::Sungero.CoreEntities.IRole",
+          "ParameterTypeFullName": "Sungero.CoreEntities.IRole, Sungero.Domain.Shared"
+        },
+        {
+          "Name": "accessRights",
+          "ParameterType": "global::System.Guid",
+          "ParameterTypeFullName": "System.Guid"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "GrantRightsOnGroup",
+      "Parameters": [
+        {
+          "Name": "users",
+          "ParameterType": "global::Sungero.CoreEntities.IRole",
+          "ParameterTypeFullName": "Sungero.CoreEntities.IRole, Sungero.Domain.Shared"
+        },
+        {
+          "Name": "accessRights",
+          "ParameterType": "global::System.Guid",
+          "ParameterTypeFullName": "System.Guid"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    }
+  ],
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "starkov.EditableConstants",
+  "IsVisible": false,
+  "Overridden": [
+    "IsVisible",
+    "Importance"
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetConstants",
+      "IsRemote": true,
+      "Placement": "Shared",
+      "ReturnType": "global::System.Linq.IQueryable<global::starkov.EditableConstants.IConstantsEntity>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
+    },
+    {
+      "Name": "GetValueBase64ByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetValueBase64ByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "base64Decode",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetValueBase64ByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "base64Decode",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetValueBooleanByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Nullable<global::System.Boolean>",
+      "ReturnTypeFullName": "System.Nullable"
+    },
+    {
+      "Name": "GetValueBooleanByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Nullable<global::System.Boolean>",
+      "ReturnTypeFullName": "System.Nullable"
+    },
+    {
+      "Name": "GetValueDoubleByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Nullable<global::System.Double>",
+      "ReturnTypeFullName": "System.Nullable"
+    },
+    {
+      "Name": "GetValueDoubleByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Nullable<global::System.Double>",
+      "ReturnTypeFullName": "System.Nullable"
+    },
+    {
+      "Name": "GetValueIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Nullable<global::System.Int32>",
+      "ReturnTypeFullName": "System.Nullable"
+    },
+    {
+      "Name": "GetValueIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Nullable<global::System.Int32>",
+      "ReturnTypeFullName": "System.Nullable"
+    },
+    {
+      "Name": "GetValueListDoubleByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::System.Double>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetValueListDoubleByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::System.Double>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetValueListIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::System.Int32>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetValueListIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::System.Int32>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetValueListStringByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetValueListStringByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetValueRangeDoubleByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::starkov.EditableConstants.Structures.Module.IRangeDoubleValues",
+      "ReturnTypeFullName": "starkov.EditableConstants.Structures.Module.IRangeDoubleValues"
+    },
+    {
+      "Name": "GetValueRangeDoubleByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::starkov.EditableConstants.Structures.Module.IRangeDoubleValues",
+      "ReturnTypeFullName": "starkov.EditableConstants.Structures.Module.IRangeDoubleValues"
+    },
+    {
+      "Name": "GetValueRangeIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::starkov.EditableConstants.Structures.Module.IRangeIntValues",
+      "ReturnTypeFullName": "starkov.EditableConstants.Structures.Module.IRangeIntValues"
+    },
+    {
+      "Name": "GetValueRangeIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::starkov.EditableConstants.Structures.Module.IRangeIntValues",
+      "ReturnTypeFullName": "starkov.EditableConstants.Structures.Module.IRangeIntValues"
+    },
+    {
+      "Name": "GetValueStringByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetValueStringByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetValueTextByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetValueTextByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "SendNotice",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "subject",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "text",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SendNoticeAndCreateExeption",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "subject",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "text",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SetValueBase64ByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueBase64ByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueBooleanByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueBooleanByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueDoubleByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueDoubleByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueListIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "listValue",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int32>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueListIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "listValue",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int32>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueListIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "listValue",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Double>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueListIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "listValue",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Double>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueListStringByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "listValue",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.String>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueListStringByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "listValue",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.String>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueRangeDoubleByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValueFrom",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "constValueBy",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueRangeDoubleByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValueFrom",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "constValueBy",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueRangeIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValueFrom",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "constValueBy",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueRangeIntByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValueFrom",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "constValueBy",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueStringByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueStringByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueTextByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueTextByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "RangeDoubleValues",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "From",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        },
+        {
+          "Name": "By",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        }
+      ],
+      "StructureNamespace": "starkov.EditableConstants.Structures.Module"
+    },
+    {
+      "Name": "RangeIntValues",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "From",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int32>"
+        },
+        {
+          "Name": "By",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int32>"
+        }
+      ],
+      "StructureNamespace": "starkov.EditableConstants.Structures.Module"
+    }
+  ],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "starkov.EditableConstants",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "starkov.EditableConstants.Server",
+  "ServerNamespace": "starkov.EditableConstants.Server",
+  "SharedAssemblyName": "starkov.EditableConstants.Shared",
+  "SharedNamespace": "starkov.EditableConstants.Shared",
+  "SpecialFolders": [],
+  "Version": "1.0.1.22",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

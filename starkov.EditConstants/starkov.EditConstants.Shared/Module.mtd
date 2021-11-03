@@ -1,0 +1,57 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "3293e057-599d-4248-827e-1ff462bc291b",
+  "Name": "EditConstants",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "starkov.EditConstants.Client",
+  "ClientBaseAssemblyName": "starkov.EditConstants.ClientBase",
+  "ClientBaseNamespace": "starkov.EditConstants.ClientBase",
+  "ClientNamespace": "starkov.EditConstants.Client",
+  "Code": "EditCon",
+  "CompanyCode": "starkov",
+  "Cover": {
+    "NameGuid": "442a7ea6-37fd-452c-b4e5-03623f3d4f8a",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "51785229-7b49-4d55-b6d2-ffbc245580a4",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "1181740f-f781-4b88-8170-d5c0027ec67e",
+      "BackgroundPosition": "Stretch"
+    }
+  },
+  "DesktopViews": [],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "starkov.EditConstants",
+  "OrderedSpecialFolders": [],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "starkov.EditConstants",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "starkov.EditConstants.Server",
+  "ServerNamespace": "starkov.EditConstants.Server",
+  "SharedAssemblyName": "starkov.EditConstants.Shared",
+  "SharedNamespace": "starkov.EditConstants.Shared",
+  "SpecialFolders": [],
+  "Version": "1.0.1.22",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

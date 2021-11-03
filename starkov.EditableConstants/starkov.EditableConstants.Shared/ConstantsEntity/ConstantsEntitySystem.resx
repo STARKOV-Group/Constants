@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Property_ValueString" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Property_Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Constants</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Constant</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Constants</value>
+  </data>
+  <data name="AdditionalInfoTemplate" xml:space="preserve">
+    <value>Справочник констант</value>
+  </data>
+  <data name="Property_Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="Property_ValueInt" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Property_TypeValue" xml:space="preserve">
+    <value>Type value</value>
+  </data>
+  <data name="Enum_TypeValue_ValString" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="Enum_TypeValue_ValInt" xml:space="preserve">
+    <value>Integer</value>
+  </data>
+  <data name="Enum_TypeValue_ValDouble" xml:space="preserve">
+    <value>Double</value>
+  </data>
+  <data name="Property_ValueDouble" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Property_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Property_ValueCollection" xml:space="preserve">
+    <value>Value list</value>
+  </data>
+  <data name="Enum_TypeValue_ValListString" xml:space="preserve">
+    <value>List string</value>
+  </data>
+  <data name="Enum_TypeValue_ValListInt" xml:space="preserve">
+    <value>List integer</value>
+  </data>
+  <data name="Enum_TypeValue_ValListDouble" xml:space="preserve">
+    <value>List double</value>
+  </data>
+  <data name="ControlGroup_898d556d4efb494486847b82e5130cdc" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Property_ValueBool" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Enum_TypeValue_ValBool" xml:space="preserve">
+    <value>Boolean</value>
+  </data>
+  <data name="Property_ValueIntFrom" xml:space="preserve">
+    <value>Value from</value>
+  </data>
+  <data name="Property_ValueIntBy" xml:space="preserve">
+    <value>Value by</value>
+  </data>
+  <data name="Enum_TypeValue_ValRangeInt" xml:space="preserve">
+    <value>Range integer</value>
+  </data>
+  <data name="Enum_TypeValue_ValRangeDouble" xml:space="preserve">
+    <value>Range double</value>
+  </data>
+  <data name="Property_ValueDoubleFrom" xml:space="preserve">
+    <value>Value from</value>
+  </data>
+  <data name="Property_ValueDoubleBy" xml:space="preserve">
+    <value>Value by</value>
+  </data>
+  <data name="Property_AllowDelete" xml:space="preserve">
+    <value>Allow delete</value>
+  </data>
+  <data name="Property_ValueBase64" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Enum_TypeValue_ValBase64" xml:space="preserve">
+    <value>Value Base64</value>
+  </data>
+  <data name="Action_SetValue" xml:space="preserve">
+    <value>Set value</value>
+  </data>
+  <data name="Action_SetValueDescription" xml:space="preserve">
+    <value>Sets the value in Base64 format</value>
+  </data>
+  <data name="Action_SetValueHint" xml:space="preserve">
+    <value>Set value to Base64</value>
+  </data>
+  <data name="Action_SetValueConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_SetValueConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_Base64Group_1fa8894c516643068acb1112ae1a5bb2" xml:space="preserve">
+    <value>Base64</value>
+  </data>
+  <data name="Property_ValueText" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Enum_TypeValue_ValText" xml:space="preserve">
+    <value>Text</value>
+  </data>
+</root>
