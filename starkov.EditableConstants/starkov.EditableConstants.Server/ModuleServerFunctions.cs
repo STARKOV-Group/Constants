@@ -8,6 +8,7 @@ namespace starkov.EditableConstants.Server
 {
   public class ModuleFunctions
   {
+    
     #region	Работа с константами
     
     #region Работа со значениями констант
@@ -32,7 +33,7 @@ namespace starkov.EditableConstants.Server
     /// <returns>Константа. Если не найдена, то null.</returns>
     public virtual starkov.EditableConstants.IConstantsEntity GetConstant(string name, Sungero.Core.Enumeration typeValue, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       
       if (!string.IsNullOrEmpty(name))
       {
@@ -41,13 +42,13 @@ namespace starkov.EditableConstants.Server
           return 	constantEntity;
         else
         {
-          string textError = string.Format("Константа \"{0}\" - не найдена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.ConstantNotFindFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
       else
       {
-        string textError = "В функцию поиска не передано имя константы";
+        string textError = Resources.ConstantNotName;
         SendNoticeAndCreateExeption(subjectError, textError, genException);
       }
       
@@ -77,7 +78,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual string GetValueStringByName(string name, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValString;
       
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -85,7 +86,7 @@ namespace starkov.EditableConstants.Server
       {
         if (string.IsNullOrEmpty(constantEntity.ValueString) || string.IsNullOrWhiteSpace(constantEntity.ValueString))
         {
-          string textError = string.Format("Константа \"{0}\" - не заполнена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.TextErrorFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
         else
@@ -116,7 +117,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueStringByName(string name, string constValue, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValString;
 
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -130,7 +131,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -162,7 +163,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual int? GetValueIntByName(string name, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValInt;
 
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -170,7 +171,7 @@ namespace starkov.EditableConstants.Server
       {
         if (!constantEntity.ValueInt.HasValue)
         {
-          string textError = string.Format("Константа \"{0}\" - не заполнена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.TextErrorFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
         else
@@ -202,7 +203,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueIntByName(string name, int constValue, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValInt;
       
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -216,7 +217,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -247,7 +248,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual double? GetValueDoubleByName(string name, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValDouble;
 
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -255,7 +256,7 @@ namespace starkov.EditableConstants.Server
       {
         if (!constantEntity.ValueDouble.HasValue)
         {
-          string textError = string.Format("Константа \"{0}\" - не заполнена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.TextErrorFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
         else
@@ -287,7 +288,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueDoubleByName(string name, double constValue, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValDouble;
       
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -301,7 +302,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -333,7 +334,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool? GetValueBooleanByName(string name, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValBool;
 
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -341,7 +342,7 @@ namespace starkov.EditableConstants.Server
       {
         if (!constantEntity.ValueBool.HasValue)
         {
-          string textError = string.Format("Константа \"{0}\" - не заполнена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.TextErrorFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
         else
@@ -374,7 +375,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueBooleanByName(string name, bool constValue, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValBool;
       
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -388,7 +389,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -420,7 +421,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual string GetValueTextByName(string name, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValText;
       
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -428,7 +429,7 @@ namespace starkov.EditableConstants.Server
       {
         if (string.IsNullOrEmpty(constantEntity.ValueText) || string.IsNullOrWhiteSpace(constantEntity.ValueText))
         {
-          string textError = string.Format("Константа \"{0}\" - не заполнена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.TextErrorFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
         else
@@ -459,7 +460,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueTextByName(string name, string constValue, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValText;
 
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -473,7 +474,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -541,7 +542,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueListStringByName(string name, List<string> listValue, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListString;
 
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -560,7 +561,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -627,7 +628,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueListIntByName(string name, List<int> listValue, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListString;
 
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -646,7 +647,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -713,7 +714,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueListIntByName(string name, List<double> listValue, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListString;
 
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -732,7 +733,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -765,7 +766,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual starkov.EditableConstants.Structures.Module.IRangeIntValues GetValueRangeIntByName(string name, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValRangeInt;
 
       var rangeInt = starkov.EditableConstants.Structures.Module.RangeIntValues.Create();
@@ -775,7 +776,7 @@ namespace starkov.EditableConstants.Server
       {
         if (!constantEntity.ValueIntFrom.HasValue)
         {
-          string textError = string.Format("Константа \"{0}\" - не заполнена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.TextErrorFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
         else
@@ -783,7 +784,7 @@ namespace starkov.EditableConstants.Server
         
         if (!constantEntity.ValueIntBy.HasValue)
         {
-          string textError = string.Format("Константа \"{0}\" - не заполнена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.TextErrorFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
         else
@@ -817,7 +818,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueRangeIntByName(string name, int constValueFrom, int constValueBy, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValRangeInt;
       
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -832,7 +833,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -864,7 +865,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual starkov.EditableConstants.Structures.Module.IRangeDoubleValues GetValueRangeDoubleByName(string name, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValRangeDouble;
 
       var rangeDouble = starkov.EditableConstants.Structures.Module.RangeDoubleValues.Create();
@@ -874,7 +875,7 @@ namespace starkov.EditableConstants.Server
       {
         if (!constantEntity.ValueDoubleFrom.HasValue)
         {
-          string textError = string.Format("Константа \"{0}\" - не заполнена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.TextErrorFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
         else
@@ -882,7 +883,7 @@ namespace starkov.EditableConstants.Server
         
         if (!constantEntity.ValueDoubleBy.HasValue)
         {
-          string textError = string.Format("Константа \"{0}\" - не заполнена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.TextErrorFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
         else
@@ -916,7 +917,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueRangeDoubleByName(string name, double constValueFrom, double constValueBy, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValRangeDouble;
       
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -931,7 +932,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -977,7 +978,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual string GetValueBase64ByName(string name, bool base64Decode, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValBase64;
 
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -985,7 +986,7 @@ namespace starkov.EditableConstants.Server
       {
         if (string.IsNullOrEmpty(constantEntity.ValueBase64) || string.IsNullOrWhiteSpace(constantEntity.ValueBase64))
         {
-          string textError = string.Format("Константа \"{0}\" - не заполнена, проверьте справочник \"Константы\"!", name);
+          string textError = Resources.TextErrorFormat(name);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
         else
@@ -1017,7 +1018,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual bool SetValueBase64ByName(string name, string constValue, bool genException)
     {
-      string subjectError = "Произошла ошибка при обращении к общей константе";
+      string subjectError = Resources.SubjectError;
       var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValBase64;
       
       var constantEntity = GetConstant(name, typeValue, genException);
@@ -1031,7 +1032,7 @@ namespace starkov.EditableConstants.Server
         }
         catch (Exception e)
         {
-          string textError = string.Format("Произошла ошибка записи в константу \"{0}\": {1}", name, e.Message);
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
           SendNoticeAndCreateExeption(subjectError, textError, genException);
         }
       }
@@ -1107,8 +1108,7 @@ namespace starkov.EditableConstants.Server
     #endregion
     
     #endregion
-    
-    
+        
     
     #region Общие функции
     

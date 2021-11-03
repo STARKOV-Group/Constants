@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="SubjectError" xml:space="preserve">
+    <value>Произошла ошибка при обращении к общей константе.</value>
+  </data>
+  <data name="TextError" xml:space="preserve">
+    <value>Константа "{0}" - не заполнена, проверьте справочник "Константы"!</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Произошла ошибка записи в константу "{0}": {1}.</value>
+  </data>
+  <data name="ConstantNotFind" xml:space="preserve">
+    <value>Константа "{0}" - не найдена, проверьте справочник "Константы"!</value>
+  </data>
+  <data name="ConstantNotName" xml:space="preserve">
+    <value>В функцию поиска не передано имя константы.</value>
+  </data>
 </root>

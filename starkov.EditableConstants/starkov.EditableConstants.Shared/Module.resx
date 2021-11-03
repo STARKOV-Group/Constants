@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="SubjectError" xml:space="preserve">
+    <value>An error occurred while accessing a shared constant.</value>
+  </data>
+  <data name="TextError" xml:space="preserve">
+    <value>Constant "{0}" - empty, check the "Constants" reference!</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>An error occurred writing to the constant "{0}": {1}.</value>
+  </data>
+  <data name="ConstantNotFind" xml:space="preserve">
+    <value>Constant "{0}" - not found, check the "Constants" reference!</value>
+  </data>
+  <data name="ConstantNotName" xml:space="preserve">
+    <value>The name of the constant was not passed to the search function.</value>
+  </data>
 </root>

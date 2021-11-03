@@ -1420,7 +1420,13 @@
   ],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "starkov.EditableConstants",
-  "ResourcesKeys": [],
+  "ResourcesKeys": [
+    "SubjectError",
+    "TextError",
+    "ErrorMessage",
+    "ConstantNotFind",
+    "ConstantNotName"
+  ],
   "ServerAssemblyName": "starkov.EditableConstants.Server",
   "ServerNamespace": "starkov.EditableConstants.Server",
   "SharedAssemblyName": "starkov.EditableConstants.Shared",
