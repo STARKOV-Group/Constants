@@ -11,8 +11,8 @@ namespace starkov.EditableConstants.Client
 	{
 		public override void DeleteEntity(Sungero.Domain.Client.ExecuteActionArgs e)
 		{
-			var message = string.Format("ВНИМАНИЕ!\r\nУдаление константы \"{0}\" может привести к ошибкам в работе системы.\r\nВы уверены, что хотите выполнить удаление?", _obj.Name);
-			var dialog = Dialogs.CreateTaskDialog("Удаление константы!", message, MessageType.Information, "Подтвердите удаление");
+			var message = ConstantsEntities.Resources.DeleteDialog_MessageFormat(_obj.Name);
+			var dialog = Dialogs.CreateTaskDialog(ConstantsEntities.Resources.DeleteDialog_Subject, message, MessageType.Information, ConstantsEntities.Resources.DeleteDialog_Confirm);
 			dialog.Buttons.AddYesNo();
 			if (dialog.Show() != DialogButtons.Yes)
 				return;
@@ -27,14 +27,14 @@ namespace starkov.EditableConstants.Client
 
 		public virtual void SetValue(Sungero.Domain.Client.ExecuteActionArgs e)
 		{
-			var dialog = Dialogs.CreateInputDialog("Изменение значения константы");
-			var newValue = dialog.AddString("Новое значение", true);
+			var dialog = Dialogs.CreateInputDialog(ConstantsEntities.Resources.SetDialog_Subject);
+			var newValue = dialog.AddString(ConstantsEntities.Resources.SetDialog_FieldName, true);
 			dialog.Buttons.AddOkCancel();
 			
 			if (dialog.Show() == DialogButtons.Ok)
 			{
 				_obj.ValueBase64 = Functions.Module.Remote.Base64Encode(newValue.Value);
-				Dialogs.ShowMessage("Значение константы изменено.\r\nДля применения изменений сохраните запись.");
+				Dialogs.ShowMessage(ConstantsEntities.Resources.SetDialog_Message);
 			}
 		}
 

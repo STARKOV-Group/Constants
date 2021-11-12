@@ -580,7 +580,27 @@
     }
   ],
   "PublicStructures": [],
-  "ResourcesKeys": [],
+  "ResourcesKeys": [
+    "RemoveMessage",
+    "DeleteSubject",
+    "DeleteMessage",
+    "DeleteDialog_Subject",
+    "DeleteDialog_Message",
+    "DeleteDialog_Confirm",
+    "SetDialog_Subject",
+    "SetDialog_Message",
+    "SetDialog_FieldName",
+    "TitleList",
+    "ListNullMessage",
+    "ValuesNullMessage",
+    "Base64Value",
+    "Yes",
+    "No",
+    "Range",
+    "Range_With",
+    "Range_By",
+    "Range_Bys"
+  ],
   "RibbonCardMetadata": {
     "NameGuid": "561fa14b-b6f7-46c5-8db5-7145155d493b",
     "Name": "RibbonCard",
