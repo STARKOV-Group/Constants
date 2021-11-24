@@ -46,18 +46,6 @@ namespace starkov.EditableConstants.Server
       }
     }
     
-    /// <summary>
-    /// Выдать права пользователям на справочник констант.
-    /// </summary>
-    /// <param name="users">Группа пользователей.</param>
-    /// <param name="accessRights">Тип прав.</param>
-    [Public]
-    public static void GrantRightsOnGroup(IRole users, Guid accessRights)
-    {
-      EditableConstants.ConstantsGroups.AccessRights.Grant(users, accessRights);
-      EditableConstants.ConstantsGroups.AccessRights.Save();
-    }
-    
     #endregion
            
     

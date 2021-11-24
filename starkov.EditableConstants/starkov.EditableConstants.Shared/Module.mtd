@@ -424,23 +424,6 @@
       ],
       "ReturnType": "void",
       "ReturnTypeFullName": "System.Void"
-    },
-    {
-      "Name": "GrantRightsOnGroup",
-      "Parameters": [
-        {
-          "Name": "users",
-          "ParameterType": "global::Sungero.CoreEntities.IRole",
-          "ParameterTypeFullName": "Sungero.CoreEntities.IRole, Sungero.Domain.Shared"
-        },
-        {
-          "Name": "accessRights",
-          "ParameterType": "global::System.Guid",
-          "ParameterTypeFullName": "System.Guid"
-        }
-      ],
-      "ReturnType": "void",
-      "ReturnTypeFullName": "System.Void"
     }
   ],
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",

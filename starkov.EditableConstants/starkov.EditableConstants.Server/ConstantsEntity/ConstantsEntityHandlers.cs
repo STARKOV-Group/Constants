@@ -44,7 +44,7 @@ namespace starkov.EditableConstants
         if (_obj.TypeValue.Value == typeListDouble && _obj.ValueCollection.Any(c => !c.ValueDouble.HasValue))
           e.AddError(message);
         
-        if (_obj.TypeValue.Value == typeListString)         
+        if (_obj.TypeValue.Value == typeListString)
           _obj.Value = ConstantsEntities.Resources.TitleListFormat(string.Join(", ", _obj.ValueCollection.Select(c => c.ValueString).Where(d => !string.IsNullOrEmpty(d) && !string.IsNullOrWhiteSpace(d))));
         
         if (_obj.TypeValue.Value == typeListInt)
@@ -72,5 +72,6 @@ namespace starkov.EditableConstants
       var message = ConstantsEntities.Resources.DeleteMessageFormat(_obj.Name, current.Name, Calendar.Now);
       Functions.Module.SendNoticeAndCreateExeption(ConstantsEntities.Resources.DeleteSubject, message, false);
     }
+  
   }
 }
