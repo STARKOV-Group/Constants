@@ -27,17 +27,17 @@ namespace starkov.EditableConstants
 			var strValue = string.Empty;
 			
 			if (_obj.ValueDoubleFrom.HasValue)
-				strValue = string.Format("с {0}", _obj.ValueDoubleFrom.Value);
+				strValue = ConstantsEntities.Resources.Range_WithFormat(_obj.ValueDoubleFrom.Value);
 			
 			if (e.NewValue.HasValue)
 			{
 				if (string.IsNullOrEmpty(strValue))
-					strValue = string.Format("по {0}", e.NewValue.Value);
+					strValue = ConstantsEntities.Resources.Range_ByFormat(e.NewValue.Value);
 				else
-					strValue = string.Format("{0} по {1}", strValue, e.NewValue.Value);
+					strValue = ConstantsEntities.Resources.Range_BysFormat(strValue, e.NewValue.Value);
 			}
 			
-			_obj.Value = string.Format("Диапазон: {0}", strValue);
+			_obj.Value = ConstantsEntities.Resources.RangeFormat(strValue);
 		}
 
 		public virtual void ValueDoubleFromChanged(Sungero.Domain.Shared.DoublePropertyChangedEventArgs e)
@@ -45,17 +45,17 @@ namespace starkov.EditableConstants
 			var strValue = string.Empty;
 			
 			if (e.NewValue.HasValue)
-				strValue = string.Format("с {0}", e.NewValue.Value);
+				strValue = ConstantsEntities.Resources.Range_WithFormat(e.NewValue.Value);
 			
 			if (_obj.ValueDoubleBy.HasValue)
 			{
 				if (string.IsNullOrEmpty(strValue))
-					strValue = string.Format("по {0}", _obj.ValueDoubleBy.Value);
+					strValue = ConstantsEntities.Resources.Range_ByFormat(_obj.ValueDoubleBy.Value);
 				else
-					strValue = string.Format("{0} по {1}", strValue, _obj.ValueDoubleBy.Value);
+					strValue = ConstantsEntities.Resources.Range_BysFormat(strValue, _obj.ValueDoubleBy.Value);
 			}
 			
-			_obj.Value = string.Format("Диапазон: {0}", strValue);
+			_obj.Value = ConstantsEntities.Resources.RangeFormat(strValue);
 		}
 
 		public virtual void ValueIntByChanged(Sungero.Domain.Shared.IntegerPropertyChangedEventArgs e)
@@ -63,17 +63,17 @@ namespace starkov.EditableConstants
 			var strValue = string.Empty;
 			
 			if (_obj.ValueIntFrom.HasValue)
-				strValue = string.Format("с {0}", _obj.ValueIntFrom.Value);
+				strValue = ConstantsEntities.Resources.Range_WithFormat(_obj.ValueIntFrom.Value);
 			
 			if (e.NewValue.HasValue)
 			{
 				if (string.IsNullOrEmpty(strValue))
-					strValue = string.Format("по {0}", e.NewValue.Value);
+					strValue = ConstantsEntities.Resources.Range_ByFormat(e.NewValue.Value);
 				else
-					strValue = string.Format("{0} по {1}", strValue, e.NewValue.Value);
+					strValue = ConstantsEntities.Resources.Range_BysFormat(strValue, e.NewValue.Value);
 			}
 			
-			_obj.Value = string.Format("Диапазон: {0}", strValue);
+			_obj.Value = ConstantsEntities.Resources.RangeFormat(strValue);
 		}
 
 		public virtual void ValueIntFromChanged(Sungero.Domain.Shared.IntegerPropertyChangedEventArgs e)
@@ -81,25 +81,25 @@ namespace starkov.EditableConstants
 			var strValue = string.Empty;
 			
 			if (e.NewValue.HasValue)
-				strValue = string.Format("с {0}", e.NewValue.Value);
+				strValue = ConstantsEntities.Resources.Range_WithFormat(e.NewValue.Value);
 			
 			if (_obj.ValueIntBy.HasValue)
 			{
 				if (string.IsNullOrEmpty(strValue))
-					strValue = string.Format("по {0}", _obj.ValueIntBy.Value);
+					strValue = ConstantsEntities.Resources.Range_ByFormat(_obj.ValueIntBy.Value);
 				else
-					strValue = string.Format("{0} по {1}", strValue, _obj.ValueIntBy.Value);
+					strValue = ConstantsEntities.Resources.Range_BysFormat(strValue, _obj.ValueIntBy.Value);
 			}
 			
-			_obj.Value = string.Format("Диапазон: {0}", strValue);
+			_obj.Value = ConstantsEntities.Resources.RangeFormat(strValue);
 		}
 
 		public virtual void ValueBoolChanged(Sungero.Domain.Shared.BooleanPropertyChangedEventArgs e)
 		{
 			if (e.NewValue.HasValue && e.NewValue.Value)
-				_obj.Value = "Да";
+				_obj.Value = ConstantsEntities.Resources.Yes;
 			else
-				_obj.Value = "Нет";
+				_obj.Value = ConstantsEntities.Resources.No;
 		}
 
 		public virtual void ValueStringChanged(Sungero.Domain.Shared.StringPropertyChangedEventArgs e)

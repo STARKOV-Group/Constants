@@ -117,4 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RemoveMessage" xml:space="preserve">
+    <value>Удаление константы запрещено!</value>
+  </data>
+  <data name="DeleteSubject" xml:space="preserve">
+    <value>Зафиксировано удаление константы.</value>
+  </data>
+  <data name="DeleteMessage" xml:space="preserve">
+    <value>ВНИМАНИЕ:
+Зафиксировано удаление константы "{0}" пользователем {1}!
+Дата и время удаления: {2}.</value>
+  </data>
+  <data name="DeleteDialog_Subject" xml:space="preserve">
+    <value>Удаление константы!</value>
+  </data>
+  <data name="DeleteDialog_Message" xml:space="preserve">
+    <value>ВНИМАНИЕ!
+Удаление константы "{0}" может привести к ошибкам в работе системы.
+Вы уверены, что хотите выполнить удаление?</value>
+  </data>
+  <data name="DeleteDialog_Confirm" xml:space="preserve">
+    <value>Подтвердите удаление</value>
+  </data>
+  <data name="SetDialog_Subject" xml:space="preserve">
+    <value>Изменение значения константы.</value>
+  </data>
+  <data name="SetDialog_Message" xml:space="preserve">
+    <value>Значение константы изменено.
+Для применения изменений сохраните запись.</value>
+  </data>
+  <data name="SetDialog_FieldName" xml:space="preserve">
+    <value>Новое значение</value>
+  </data>
+  <data name="TitleList" xml:space="preserve">
+    <value>Список: {0}</value>
+  </data>
+  <data name="ListNullMessage" xml:space="preserve">
+    <value>Список значений не может быть пустым!</value>
+  </data>
+  <data name="ValuesNullMessage" xml:space="preserve">
+    <value>Значения в списке не могут быть пустыми!</value>
+  </data>
+  <data name="Base64Value" xml:space="preserve">
+    <value>Строка в формате Base64</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="Range" xml:space="preserve">
+    <value>Диапазон: {0}</value>
+  </data>
+  <data name="Range_With" xml:space="preserve">
+    <value>с {0}</value>
+  </data>
+  <data name="Range_By" xml:space="preserve">
+    <value>по {0}</value>
+  </data>
+  <data name="Range_Bys" xml:space="preserve">
+    <value>{0} по {1}</value>
+  </data>
 </root>

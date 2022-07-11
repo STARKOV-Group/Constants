@@ -12,20 +12,21 @@ namespace starkov.EditableConstants
 
     public override void BeforeDelete(Sungero.Domain.BeforeDeleteEventArgs e)
     {
-    	Logger.ErrorFormat("ВНИМАНИЕ: Зафиксировано удаление группы констант \"{0}\" пользователем Integration Service", _obj.Name);
+      var current = Sungero.CoreEntities.Users.Current;
+      Logger.ErrorFormat("ВНИМАНИЕ: Зафиксировано удаление группы констант \"{0}\" пользователем {1}", _obj.Name, current.Name);
     }
   }
 
-	partial class ConstantsGroupFilteringServerHandler<T>
-	{
+  partial class ConstantsGroupFilteringServerHandler<T>
+  {
 
-		public override IQueryable<T> Filtering(IQueryable<T> query, Sungero.Domain.FilteringEventArgs e)
-		{
-			if (Users.Current.IncludedIn(Roles.Administrators))
-				return query;
-			else
-				return query.Where(r => r == null);
-		}
-	}
+    public override IQueryable<T> Filtering(IQueryable<T> query, Sungero.Domain.FilteringEventArgs e)
+    {
+      if (Users.Current.IncludedIn(Roles.Administrators))
+        return query;
+      else
+        return query.Where(r => r == null);
+    }
+  }
 
 }

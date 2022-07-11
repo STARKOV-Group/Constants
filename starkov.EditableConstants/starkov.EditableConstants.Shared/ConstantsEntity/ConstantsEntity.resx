@@ -117,4 +117,70 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RemoveMessage" xml:space="preserve">
+    <value>Removing a constant is prohibited!</value>
+  </data>
+  <data name="DeleteSubject" xml:space="preserve">
+    <value>Fixed deletion of a constant.</value>
+  </data>
+  <data name="DeleteMessage" xml:space="preserve">
+    <value>ATTENTION:
+Fixed deletion of constant "{0}" by user {1}!
+
+Date and time of deletion: {2}.</value>
+  </data>
+  <data name="DeleteDialog_Subject" xml:space="preserve">
+    <value>Removing a constant!</value>
+  </data>
+  <data name="DeleteDialog_Message" xml:space="preserve">
+    <value>ATTENTION!
+
+Removing the constant "{0}" can lead to errors in the system.
+
+Are you sure you want to delete?</value>
+  </data>
+  <data name="DeleteDialog_Confirm" xml:space="preserve">
+    <value>Confirm deletion</value>
+  </data>
+  <data name="SetDialog_Subject" xml:space="preserve">
+    <value>Changing the value of a constant.</value>
+  </data>
+  <data name="SetDialog_Message" xml:space="preserve">
+    <value>The value of the constant has been changed.
+
+Save the entry to apply the changes.</value>
+  </data>
+  <data name="SetDialog_FieldName" xml:space="preserve">
+    <value>New value</value>
+  </data>
+  <data name="TitleList" xml:space="preserve">
+    <value>List: {0}</value>
+  </data>
+  <data name="ListNullMessage" xml:space="preserve">
+    <value>The list of values cannot be empty!</value>
+  </data>
+  <data name="ValuesNullMessage" xml:space="preserve">
+    <value>The values in the list cannot be empty!</value>
+  </data>
+  <data name="Base64Value" xml:space="preserve">
+    <value>Base64 string</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Range" xml:space="preserve">
+    <value>Range: {0}</value>
+  </data>
+  <data name="Range_With" xml:space="preserve">
+    <value>with {0}</value>
+  </data>
+  <data name="Range_By" xml:space="preserve">
+    <value>by {0}</value>
+  </data>
+  <data name="Range_Bys" xml:space="preserve">
+    <value>{0} by {1}</value>
+  </data>
 </root>
