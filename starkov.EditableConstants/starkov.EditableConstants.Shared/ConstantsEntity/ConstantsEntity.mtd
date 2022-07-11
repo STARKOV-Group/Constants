@@ -600,11 +600,14 @@
       "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
       "NameGuid": "36f4ab31-b6f3-4c8a-a191-078cd90a6e55",
       "Name": "ValueDateTime",
+      "CanBeSearch": false,
       "Code": "ValueDateTime",
       "DateTimeFormat": "DateTime",
       "HandledEvents": [
         "ChangedShared"
       ],
+      "IsShowedInList": false,
+      "IsVisibility": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
       "PreviousPropertyGuid": "87c647b5-fac5-4349-bf0a-0308959ef899"
     }
