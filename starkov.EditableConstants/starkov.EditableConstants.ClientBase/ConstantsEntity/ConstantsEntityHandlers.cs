@@ -23,6 +23,8 @@ namespace starkov.EditableConstants
       var typeBoolean = starkov.EditableConstants.ConstantsEntity.TypeValue.ValBool;
       // Тип константы - текст
       var typeText = starkov.EditableConstants.ConstantsEntity.TypeValue.ValText;
+      // Тип константы - дата/время
+      var typeDateTime = starkov.EditableConstants.ConstantsEntity.TypeValue.ValDateTime;
       
       // Тип константы - список строк
       var typeListString = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListString;
@@ -71,6 +73,12 @@ namespace starkov.EditableConstants
       {
         properties.ValueText.IsVisible = true;
         properties.ValueText.IsRequired = true;
+      }
+      
+      if (_obj.TypeValue == typeDateTime)
+      {
+        properties.ValueDateTime.IsVisible = true;
+        properties.ValueDateTime.IsRequired = true;
       }
       #endregion
       
