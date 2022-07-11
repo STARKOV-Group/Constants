@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -11,6 +11,14 @@ namespace starkov.EditableConstants
 
 	partial class ConstantsEntitySharedHandlers
 	{
+
+    public virtual void ValueDateTimeChanged(Sungero.Domain.Shared.DateTimePropertyChangedEventArgs e)
+    {
+       if (e.NewValue.HasValue)
+        _obj.Value = e.NewValue.Value.ToString("d");
+      else
+        _obj.Value = string.Empty;
+    }
 
 		public virtual void ValueTextChanged(Sungero.Domain.Shared.TextPropertyChangedEventArgs e)
 		{
