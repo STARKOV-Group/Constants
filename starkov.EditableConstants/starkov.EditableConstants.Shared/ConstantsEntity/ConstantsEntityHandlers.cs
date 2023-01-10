@@ -12,13 +12,19 @@ namespace starkov.EditableConstants
 	partial class ConstantsEntitySharedHandlers
 	{
 
-    public virtual void ValueDateTimeChanged(Sungero.Domain.Shared.DateTimePropertyChangedEventArgs e)
-    {
-       if (e.NewValue.HasValue)
-        _obj.Value = e.NewValue.Value.ToString("G");
-      else
-        _obj.Value = string.Empty;
-    }
+		public virtual void ValueChanged(Sungero.Domain.Shared.StringPropertyChangedEventArgs e)
+		{
+			if (e.NewValue.Length > 1000)
+				_obj.Value = e.NewValue.Substring(0, 1000);
+		}
+
+		public virtual void ValueDateTimeChanged(Sungero.Domain.Shared.DateTimePropertyChangedEventArgs e)
+		{
+			if (e.NewValue.HasValue)
+				_obj.Value = e.NewValue.Value.ToString("G");
+			else
+				_obj.Value = string.Empty;
+		}
 
 		public virtual void ValueTextChanged(Sungero.Domain.Shared.TextPropertyChangedEventArgs e)
 		{
