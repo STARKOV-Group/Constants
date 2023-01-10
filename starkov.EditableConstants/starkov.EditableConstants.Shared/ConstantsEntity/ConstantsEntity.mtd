@@ -468,6 +468,9 @@
       "NameGuid": "f411233e-5abc-416f-a2e0-735d7e8ee1c4",
       "Name": "Value",
       "Code": "Value",
+      "HandledEvents": [
+        "ChangedShared"
+      ],
       "IsEnabled": false,
       "IsVisibility": false,
       "Length": 1000,
