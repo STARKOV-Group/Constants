@@ -29,6 +29,8 @@
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "starkov.EditConstants",
+  "IsolatedAssemblyName": "starkov.EditConstants.Isolated",
+  "IsolatedNamespace": "starkov.EditConstants.Isolated",
   "OrderedSpecialFolders": [],
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",

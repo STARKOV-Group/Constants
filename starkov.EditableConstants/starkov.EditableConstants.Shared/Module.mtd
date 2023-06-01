@@ -473,6 +473,8 @@
   ],
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "starkov.EditableConstants",
+  "IsolatedAssemblyName": "starkov.EditableConstants.Isolated",
+  "IsolatedNamespace": "starkov.EditableConstants.Isolated",
   "IsVisible": false,
   "Overridden": [
     "IsVisible",
