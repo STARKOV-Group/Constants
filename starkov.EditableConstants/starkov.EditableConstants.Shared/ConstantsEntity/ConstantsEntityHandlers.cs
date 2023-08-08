@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -7,10 +7,52 @@ using starkov.EditableConstants.ConstantsEntity;
 
 namespace starkov.EditableConstants
 {
-
-
 	partial class ConstantsEntitySharedHandlers
 	{
+
+    public virtual void ValueLongByChanged(Sungero.Domain.Shared.LongIntegerPropertyChangedEventArgs e)
+    {
+      var strValue = string.Empty;
+			
+			if (_obj.ValueLongFrom.HasValue)
+				strValue = ConstantsEntities.Resources.Range_WithFormat(_obj.ValueLongFrom.Value);
+			
+			if (e.NewValue.HasValue)
+			{
+				if (string.IsNullOrEmpty(strValue))
+					strValue = ConstantsEntities.Resources.Range_ByFormat(e.NewValue.Value);
+				else
+					strValue = ConstantsEntities.Resources.Range_BysFormat(strValue, e.NewValue.Value);
+			}
+			
+			_obj.Value = ConstantsEntities.Resources.RangeFormat(strValue);
+    }
+
+    public virtual void ValueLongFromChanged(Sungero.Domain.Shared.LongIntegerPropertyChangedEventArgs e)
+    {
+      var strValue = string.Empty;
+			
+			if (e.NewValue.HasValue)
+				strValue = ConstantsEntities.Resources.Range_WithFormat(e.NewValue.Value);
+			
+			if (_obj.ValueLongBy.HasValue)
+			{
+				if (string.IsNullOrEmpty(strValue))
+					strValue = ConstantsEntities.Resources.Range_ByFormat(_obj.ValueLongBy.Value);
+				else
+					strValue = ConstantsEntities.Resources.Range_BysFormat(strValue, _obj.ValueLongBy.Value);
+			}
+			
+			_obj.Value = ConstantsEntities.Resources.RangeFormat(strValue);
+    }
+
+    public virtual void ValueLongChanged(Sungero.Domain.Shared.LongIntegerPropertyChangedEventArgs e)
+    {
+      if (e.NewValue.HasValue)
+				_obj.Value = e.NewValue.Value.ToString();
+			else
+				_obj.Value = string.Empty;
+    }
 
 		public virtual void ValueChanged(Sungero.Domain.Shared.StringPropertyChangedEventArgs e)
 		{

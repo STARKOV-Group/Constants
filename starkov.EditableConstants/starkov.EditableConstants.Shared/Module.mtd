@@ -256,6 +256,33 @@
           "ParameterTypeFullName": "System.String"
         },
         {
+          "Name": "constantValue",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
           "Name": "constantValueFrom",
           "ParameterType": "global::System.Int32",
           "ParameterTypeFullName": "System.Int32"
@@ -296,6 +323,38 @@
           "Name": "constantValueBy",
           "ParameterType": "global::System.Double",
           "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValueFrom",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "constantValueBy",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
         },
         {
           "Name": "note",
@@ -376,6 +435,33 @@
         {
           "Name": "constantValuesList",
           "ParameterType": "global::System.Collections.Generic.List<global::System.Double>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "note",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "groupName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateConstants",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constantValuesList",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
           "ParameterTypeFullName": "System.Collections.Generic.List"
         },
         {
@@ -744,6 +830,39 @@
       "ReturnTypeFullName": "System.Collections.Generic.List"
     },
     {
+      "Name": "GetValueListLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::System.Int64>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetValueListLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::System.Int64>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
       "Name": "GetValueListStringByName",
       "IsRemote": true,
       "Parameters": [
@@ -775,6 +894,39 @@
       "Placement": "Shared",
       "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
       "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetValueLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Nullable<global::System.Int64>",
+      "ReturnTypeFullName": "System.Nullable"
+    },
+    {
+      "Name": "GetValueLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Nullable<global::System.Int64>",
+      "ReturnTypeFullName": "System.Nullable"
     },
     {
       "Name": "GetValueRangeDoubleByName",
@@ -841,6 +993,39 @@
       "Placement": "Shared",
       "ReturnType": "global::starkov.EditableConstants.Structures.Module.IRangeIntValues",
       "ReturnTypeFullName": "starkov.EditableConstants.Structures.Module.IRangeIntValues"
+    },
+    {
+      "Name": "GetValueRangeLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::starkov.EditableConstants.Structures.Module.IRangeLongValues",
+      "ReturnTypeFullName": "starkov.EditableConstants.Structures.Module.IRangeLongValues"
+    },
+    {
+      "Name": "GetValueRangeLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::starkov.EditableConstants.Structures.Module.IRangeLongValues",
+      "ReturnTypeFullName": "starkov.EditableConstants.Structures.Module.IRangeLongValues"
     },
     {
       "Name": "GetValueStringByName",
@@ -1253,6 +1438,49 @@
       "ReturnTypeFullName": "System.Boolean"
     },
     {
+      "Name": "SetValueListLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "listValue",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueListLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "listValue",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
       "Name": "SetValueListStringByName",
       "IsRemote": true,
       "Parameters": [
@@ -1284,6 +1512,49 @@
           "Name": "listValue",
           "ParameterType": "global::System.Collections.Generic.List<global::System.String>",
           "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValue",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
         },
         {
           "Name": "genException",
@@ -1390,6 +1661,59 @@
           "Name": "constValueBy",
           "ParameterType": "global::System.Int32",
           "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "genException",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueRangeLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValueFrom",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "constValueBy",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SetValueRangeLongByName",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "constValueFrom",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "constValueBy",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
         },
         {
           "Name": "genException",
@@ -1519,6 +1843,23 @@
           "Name": "By",
           "IsNullable": true,
           "TypeFullName": "global::System.Nullable<global::System.Int32>"
+        }
+      ],
+      "StructureNamespace": "starkov.EditableConstants.Structures.Module"
+    },
+    {
+      "Name": "RangeLongValues",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "From",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "By",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
         }
       ],
       "StructureNamespace": "starkov.EditableConstants.Structures.Module"

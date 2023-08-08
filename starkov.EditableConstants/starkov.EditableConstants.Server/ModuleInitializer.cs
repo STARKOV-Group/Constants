@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -280,6 +280,27 @@ namespace starkov.EditableConstants.Server
       }
     }
     
+    /// <summary>
+    /// Создание записи справочника Константы.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="constantValue">Значение константы.</param>
+    /// <param name="note">Примечание константы.</param>
+    /// <param name="name">Имя группы.</param>
+    [Public]
+    public static void CreateConstants(string name, long constantValue, string note, string groupName)
+    {
+      // Тип константы - идентификатор
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValLong;
+      
+      var constant = GetNewConstant(name, typeValue, note, groupName);
+      if (constant != null)
+      {
+        constant.ValueLong = constantValue;
+        constant.Save();
+      }
+    }
+    
     #endregion
     
     #region Диапазоны простых типов
@@ -328,6 +349,30 @@ namespace starkov.EditableConstants.Server
       {
         constant.ValueDoubleFrom = constantValueFrom;
         constant.ValueDoubleBy = constantValueBy;
+        constant.Save();
+      }
+    }
+    
+    /// <summary>
+    /// Создание записи справочника Константы.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="constantValueFrom">Значение константы (Значение С).</param>
+    /// <param name="constantValueFrom">Значение константы (Значение ПО).</param>
+    /// <param name="typeValue">Тип константы</param>
+    /// <param name="note">Примечание.</param>
+    /// <param name="name">Имя группы.</param>
+    [Public]
+    public static void CreateConstants(string name, long constantValueFrom, long constantValueBy, string note, string groupName)
+    {
+      // Тип константы - диапазон вещественных
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValRangeLong;
+      
+      var constant = GetNewConstant(name, typeValue, note, groupName);
+      if (constant != null)
+      {
+        constant.ValueLongFrom = constantValueFrom;
+        constant.ValueLongBy = constantValueBy;
         constant.Save();
       }
     }
@@ -408,6 +453,32 @@ namespace starkov.EditableConstants.Server
         {
           var newLine = constant.ValueCollection.AddNew();
           newLine.ValueDouble = constantValue;
+          
+        }
+        constant.Save();
+      }
+    }
+    
+    /// <summary>
+    /// Создание записи справочника Константы.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="constantValue">Значение константы.</param>
+    /// <param name="note">Примечание константы.</param>
+    /// <param name="name">Имя группы.</param>
+    [Public]
+    public static void CreateConstants(string name, List<long> constantValuesList, string note, string groupName)
+    {
+      // Тип константы - список вещественных
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListLong;
+      
+      var constant = GetNewConstant(name, typeValue, note, groupName);
+      if (constant != null)
+      {
+        foreach (var constantValue in constantValuesList)
+        {
+          var newLine = constant.ValueCollection.AddNew();
+          newLine.ValueLong = constantValue;
           
         }
         constant.Save();

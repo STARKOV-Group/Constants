@@ -181,4 +181,22 @@
   <data name="Enum_TypeValue_ValDateTime" xml:space="preserve">
     <value>Date and time</value>
   </data>
+  <data name="Property_ValueLong" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Property_ValueLongFrom" xml:space="preserve">
+    <value>Value from</value>
+  </data>
+  <data name="Property_ValueLongBy" xml:space="preserve">
+    <value>Value by</value>
+  </data>
+  <data name="Enum_TypeValue_ValListLong" xml:space="preserve">
+    <value>List identifier</value>
+  </data>
+  <data name="Enum_TypeValue_ValRangeLong" xml:space="preserve">
+    <value>Range identifier</value>
+  </data>
+  <data name="Enum_TypeValue_ValLong" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
 </root>

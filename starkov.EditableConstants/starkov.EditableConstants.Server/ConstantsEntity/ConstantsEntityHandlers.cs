@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -7,7 +7,6 @@ using starkov.EditableConstants.ConstantsEntity;
 
 namespace starkov.EditableConstants
 {
-
   partial class ConstantsEntityServerHandlers
   {
 
@@ -25,8 +24,10 @@ namespace starkov.EditableConstants
       var typeListInt = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListInt;
       // Тип константы - список вещественных
       var typeListDouble = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListDouble;
+      // Тип константы - список идентификаторов
+      var typeListLong = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListLong;
       
-      var typeList = new List<Sungero.Core.Enumeration> {typeListString, typeListInt, typeListDouble};
+      var typeList = new List<Sungero.Core.Enumeration> {typeListString, typeListInt, typeListDouble, typeListLong};
       #endregion
       
       if (typeList.Contains(_obj.TypeValue.Value))
@@ -44,11 +45,17 @@ namespace starkov.EditableConstants
         if (_obj.TypeValue.Value == typeListDouble && _obj.ValueCollection.Any(c => !c.ValueDouble.HasValue))
           e.AddError(message);
         
+        if (_obj.TypeValue.Value == typeListLong && _obj.ValueCollection.Any(c => !c.ValueLong.HasValue))
+          e.AddError(message);
+        
         if (_obj.TypeValue.Value == typeListString)         
           _obj.Value = ConstantsEntities.Resources.TitleListFormat(string.Join(", ", _obj.ValueCollection.Select(c => c.ValueString).Where(d => !string.IsNullOrEmpty(d) && !string.IsNullOrWhiteSpace(d))));
         
         if (_obj.TypeValue.Value == typeListInt)
           _obj.Value = ConstantsEntities.Resources.TitleListFormat(string.Join(", ", _obj.ValueCollection.Select(c => c.ValueInt).Where(d => d != null)));
+        
+        if (_obj.TypeValue.Value == typeListLong)
+          _obj.Value = ConstantsEntities.Resources.TitleListFormat(string.Join(", ", _obj.ValueCollection.Select(c => c.ValueLong).Where(d => d != null)));
         
         if (_obj.TypeValue.Value == typeListDouble)
         {
@@ -72,5 +79,6 @@ namespace starkov.EditableConstants
       var message = ConstantsEntities.Resources.DeleteMessageFormat(_obj.Name, current.Name, Calendar.Now);
       Functions.Module.SendNoticeAndCreateExeption(ConstantsEntities.Resources.DeleteSubject, message, false);
     }
+  
   }
 }

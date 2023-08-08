@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -38,5 +38,22 @@ namespace starkov.EditableConstants.Structures.Module
 		/// По
 		/// </summary>
 		public double? By { get; set; }
+	}
+	
+	/// <summary>
+	/// Диапазон идентификаторов (From - С, By - По).
+	/// </summary>
+	[Sungero.Core.PublicAttribute]
+	partial class RangeLongValues
+	{
+		/// <summary>
+		/// С
+		/// </summary>
+		public long? From { get; set; }
+		
+		/// <summary>
+		/// По
+		/// </summary>
+		public long? By { get; set; }
 	}
 }

@@ -172,4 +172,22 @@
   <data name="Enum_TypeValue_ValDateTime" xml:space="preserve">
     <value>Дата и время</value>
   </data>
+  <data name="Property_ValueLong" xml:space="preserve">
+    <value>Значение</value>
+  </data>
+  <data name="Property_ValueLongFrom" xml:space="preserve">
+    <value>Значение с</value>
+  </data>
+  <data name="Property_ValueLongBy" xml:space="preserve">
+    <value>Значение по</value>
+  </data>
+  <data name="Enum_TypeValue_ValRangeLong" xml:space="preserve">
+    <value>Диапазон идентификаторов</value>
+  </data>
+  <data name="Enum_TypeValue_ValLong" xml:space="preserve">
+    <value>Идентификатор</value>
+  </data>
+  <data name="Enum_TypeValue_ValListLong" xml:space="preserve">
+    <value>Список идентификаторов</value>
+  </data>
 </root>
