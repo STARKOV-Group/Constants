@@ -49,6 +49,17 @@
       "IsVisibility": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
       "PreviousPropertyGuid": "7a19acee-652e-4b81-a124-833ecff1a391"
+    },
+    {
+      "$type": "Sungero.Metadata.LongIntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "15b37a92-7b29-46af-a665-8dae427c9f2c",
+      "Name": "ValueLong",
+      "CanBeSearch": false,
+      "Code": "ValueLong",
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "b20641e0-9ccd-421e-a5a9-3145a1809dfb",
+      "Versions": []
     }
   ],
   "PublicStructures": [],
@@ -74,7 +85,7 @@
   "Versions": [
     {
       "Type": "EntityMetadata",
-      "Number": 9
+      "Number": 12
     }
   ]
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -8,7 +8,7 @@ namespace starkov.EditableConstants.Server
 {
   public class ModuleFunctions
   {
-    
+
     #region	Работа с константами
     
     #region Работа со значениями констант
@@ -212,6 +212,92 @@ namespace starkov.EditableConstants.Server
         try
         {
           constantEntity.ValueInt = constValue;
+          constantEntity.Save();
+          return true;
+        }
+        catch (Exception e)
+        {
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
+          SendNoticeAndCreateExeption(subjectError, textError, genException);
+        }
+      }
+      
+      return false;
+    }
+    
+    #endregion
+    
+    #region Идентификаторы
+    
+    /// <summary>
+    /// Получить значение константы - идентификатор.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <returns>Значение константы, если константа не найдена, то null.</returns>
+    [Remote, Public]
+    public virtual long? GetValueLongByName(string name)
+    {
+      return this.GetValueLongByName(name, true);
+    }
+    
+    /// <summary>
+    /// Получить значение константы - идентификатор.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="genException">Генерировать исключения.</param>
+    /// <returns>Значение константы, если константа не найдена, то null.</returns>
+    [Remote, Public]
+    public virtual long? GetValueLongByName(string name, bool genException)
+    {
+      string subjectError = Resources.SubjectError;
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValLong;
+
+      var constantEntity = GetConstant(name, typeValue, genException);
+      if (constantEntity != null)
+      {
+        if (!constantEntity.ValueLong.HasValue)
+        {
+          string textError = Resources.TextErrorFormat(name);
+          SendNoticeAndCreateExeption(subjectError, textError, genException);
+        }
+        else
+          return constantEntity.ValueLong;
+      }
+      
+      return null;
+    }
+    
+    /// <summary>
+    /// Установить значение константы - идентификатор.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="constValue">Новое значение константы.</param>
+    /// <returns>True - если значение установлено, иначе - False.</returns>
+    [Remote, Public]
+    public virtual bool SetValueLongByName(string name, long constValue)
+    {
+      return this.SetValueLongByName(name, constValue, true);
+    }
+    
+    /// <summary>
+    /// Установить значение константы - идентификатор.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="constValue">Новое значение константы.</param>
+    /// <param name="genException">Генерировать исключения.</param>
+    /// <returns>True - если значение установлено, иначе - False.</returns>
+    [Remote, Public]
+    public virtual bool SetValueLongByName(string name, long constValue, bool genException)
+    {
+      string subjectError = Resources.SubjectError;
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValLong;
+      
+      var constantEntity = GetConstant(name, typeValue, genException);
+      if (constantEntity != null)
+      {
+        try
+        {
+          constantEntity.ValueLong = constValue;
           constantEntity.Save();
           return true;
         }
@@ -484,6 +570,92 @@ namespace starkov.EditableConstants.Server
     
     #endregion
     
+    #region Даты
+    
+    /// <summary>
+    /// Получить дату из константы.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <returns>Значение константы, если константа не найдена, то null.</returns>
+    [Remote, Public]
+    public virtual DateTime? GetValueDateTimeByName(string name)
+    {
+      return this.GetValueDateTimeByName(name, true);
+    }
+    
+    /// <summary>
+    /// Получить дату из константы.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="genException">Генерировать исключения.</param>
+    /// <returns>Значение константы, если константа не найдена, то null.</returns>
+    [Remote, Public]
+    public virtual DateTime? GetValueDateTimeByName(string name, bool genException)
+    {
+      string subjectError = Resources.SubjectError;
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValDateTime;
+
+      var constantEntity = GetConstant(name, typeValue, genException);
+      if (constantEntity != null)
+      {
+        if (!constantEntity.ValueDateTime.HasValue)
+        {
+          string textError = Resources.TextErrorFormat(name);
+          SendNoticeAndCreateExeption(subjectError, textError, genException);
+        }
+        else
+          return constantEntity.ValueDateTime;
+      }
+      
+      return null;
+    }
+    
+    /// <summary>
+    /// Установить дату в константе.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="constValue">Новое значение константы.</param>
+    /// <returns>True - если значение установлено, иначе - False.</returns>
+    [Remote, Public]
+    public virtual bool SetValueDateTimeByName(string name, DateTime constValue)
+    {
+      return this.SetValueDateTimeByName(name, constValue, true);
+    }
+    
+    /// <summary>
+    /// Установить дату в константе.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="constValue">Новое значение константы.</param>
+    /// <param name="genException">Генерировать исключения.</param>
+    /// <returns>True - если значение установлено, иначе - False.</returns>
+    [Remote, Public]
+    public virtual bool SetValueDateTimeByName(string name, DateTime constValue, bool genException)
+    {
+      string subjectError = Resources.SubjectError;
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValDateTime;
+      
+      var constantEntity = GetConstant(name, typeValue, genException);
+      if (constantEntity != null)
+      {
+        try
+        {
+          constantEntity.ValueDateTime = constValue;
+          constantEntity.Save();
+          return true;
+        }
+        catch (Exception e)
+        {
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
+          SendNoticeAndCreateExeption(subjectError, textError, genException);
+        }
+      }
+      
+      return false;
+    }
+    
+    #endregion
+    
     
     #region Список строковых значений
     
@@ -629,7 +801,7 @@ namespace starkov.EditableConstants.Server
     public virtual bool SetValueListIntByName(string name, List<int> listValue, bool genException)
     {
       string subjectError = Resources.SubjectError;
-      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListString;
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListInt;
 
       var constantEntity = GetConstant(name, typeValue, genException);
       if (constantEntity != null)
@@ -726,6 +898,92 @@ namespace starkov.EditableConstants.Server
           {
             var newLine = constantEntity.ValueCollection.AddNew();
             newLine.ValueDouble = newValue;
+          }
+          constantEntity.Save();
+          
+          return true;
+        }
+        catch (Exception e)
+        {
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
+          SendNoticeAndCreateExeption(subjectError, textError, genException);
+        }
+      }
+      
+      return false;
+    }
+    
+    #endregion
+    
+    #region Список идентификаторов
+    
+    /// <summary>
+    /// Получить список значений константы - идентификаторы.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <returns>Значение константы, если константа не найдена, то пустой List.</c>.</returns>
+    [Remote, Public]
+    public virtual List<long> GetValueListLongByName(string name)
+    {
+      return this.GetValueListLongByName(name, true);
+    }
+    
+    /// <summary>
+    /// Получить список значений константы - идентификаторы.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="genException">Генерировать исключения.</param>
+    /// <returns>Значение константы, если константа не найдена, то пустой List.</c>.</returns>
+    [Remote, Public]
+    public virtual List<long> GetValueListLongByName(string name, bool genException)
+    {
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListLong;
+      var listValues = new List<long> {};
+      
+      var constantEntity = GetConstant(name, typeValue, genException);
+      if (constantEntity != null)
+      {
+        foreach (long constValue in constantEntity.ValueCollection.Where(c => c.ValueLong.HasValue).Select(c => c.ValueLong))
+          listValues.Add(constValue);
+      }
+      
+      return listValues;
+    }
+    
+    /// <summary>
+    /// Добавить список значений в константу - идентификаторы.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="listValue">Список новых значений.</param>
+    /// <returns>True - если значение установлено, иначе - False.</returns>
+    [Remote, Public]
+    public virtual bool SetValueListLongByName(string name, List<long> listValue)
+    {
+      return this.SetValueListLongByName(name, listValue, true);
+    }
+    
+    /// <summary>
+    /// Добавить список значений в константу - идентификаторы.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="listValue">Список новых значений.</param>
+    /// <param name="genException">Генерировать исключения.</param>
+    /// <returns>True - если значение установлено, иначе - False.</returns>
+    [Remote, Public]
+    public virtual bool SetValueListLongByName(string name, List<long> listValue, bool genException)
+    {
+      string subjectError = Resources.SubjectError;
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValListLong;
+
+      var constantEntity = GetConstant(name, typeValue, genException);
+      if (constantEntity != null)
+      {
+        try
+        {
+          foreach (var newValue in listValue)
+          {
+            var newLine = constantEntity.ValueCollection.AddNew();
+            newLine.ValueLong = newValue;
           }
           constantEntity.Save();
           
@@ -942,6 +1200,105 @@ namespace starkov.EditableConstants.Server
     
     #endregion
     
+    #region Диапазон идентификаторов
+    
+    /// <summary>
+    /// Получить диапазон значений константы - идентификаторов.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <returns>Структура RangeLongValues {From, By}.</returns>
+    [Remote, Public]
+    public virtual starkov.EditableConstants.Structures.Module.IRangeLongValues GetValueRangeLongByName(string name)
+    {
+      return this.GetValueRangeLongByName(name, true);
+    }
+    
+    /// <summary>
+    /// Получить диапазон значений константы - идентификаторов.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="genException">Генерировать исключения.</param>
+    /// <returns>Структура RangeLongValues {From, By}.</returns>
+    [Remote, Public]
+    public virtual starkov.EditableConstants.Structures.Module.IRangeLongValues GetValueRangeLongByName(string name, bool genException)
+    {
+      string subjectError = Resources.SubjectError;
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValRangeLong;
+
+      var rangeLong = starkov.EditableConstants.Structures.Module.RangeLongValues.Create();
+      
+      var constantEntity = GetConstant(name, typeValue, genException);
+      if (constantEntity != null)
+      {
+        if (!constantEntity.ValueLongFrom.HasValue)
+        {
+          string textError = Resources.TextErrorFormat(name);
+          SendNoticeAndCreateExeption(subjectError, textError, genException);
+        }
+        else
+          rangeLong.From = constantEntity.ValueLongFrom.Value;
+        
+        if (!constantEntity.ValueLongBy.HasValue)
+        {
+          string textError = Resources.TextErrorFormat(name);
+          SendNoticeAndCreateExeption(subjectError, textError, genException);
+        }
+        else
+          rangeLong.By = constantEntity.ValueLongBy.Value;
+      }
+      
+      return rangeLong;
+    }
+    
+    /// <summary>
+    /// Установить диапазон значений константы - идентификаторов.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="constValueFrom">Новое значение константы (Значение С).</param>
+    /// <param name="constValueBy">Новое значение константы (Значение ПО).</param>
+    /// <returns>True - если значение установлено, иначе - False.</returns>
+    [Remote, Public]
+    public virtual bool SetValueRangeLongByName(string name, long constValueFrom, long constValueBy)
+    {
+      return this.SetValueRangeLongByName(name, constValueFrom, constValueBy, true);
+    }
+    
+    /// <summary>
+    /// Установить диапазон значений константы - идентификаторов.
+    /// </summary>
+    /// <param name="name">Имя константы.</param>
+    /// <param name="constValueFrom">Новое значение константы (Значение С).</param>
+    /// <param name="constValueBy">Новое значение константы (Значение ПО).</param>
+    /// <param name="genException">Генерировать исключения.</param>
+    /// <returns>True - если значение установлено, иначе - False.</returns>
+    [Remote, Public]
+    public virtual bool SetValueRangeLongByName(string name, long constValueFrom, long constValueBy, bool genException)
+    {
+      string subjectError = Resources.SubjectError;
+      var typeValue = starkov.EditableConstants.ConstantsEntity.TypeValue.ValRangeLong;
+      
+      var constantEntity = GetConstant(name, typeValue, genException);
+      if (constantEntity != null)
+      {
+        try
+        {
+          constantEntity.ValueLongFrom = constValueFrom;
+          constantEntity.ValueLongBy = constValueBy;
+          constantEntity.Save();
+          return true;
+        }
+        catch (Exception e)
+        {
+          string textError = Resources.ErrorMessageFormat(name, e.Message);
+          SendNoticeAndCreateExeption(subjectError, textError, genException);
+        }
+      }
+      
+      return false;
+    }
+    
+    #endregion
+    
     
     #region Base64 значения
     
@@ -1108,7 +1465,7 @@ namespace starkov.EditableConstants.Server
     #endregion
     
     #endregion
-        
+    
     
     #region Общие функции
     

@@ -21,13 +21,17 @@
     "Header": {
       "NameGuid": "1181740f-f781-4b88-8170-d5c0027ec67e",
       "BackgroundPosition": "Stretch"
-    }
+    },
+    "RemoteControls": [],
+    "Tabs": []
   },
   "DesktopViews": [],
   "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "starkov.EditConstants",
+  "IsolatedAssemblyName": "starkov.EditConstants.Isolated",
+  "IsolatedNamespace": "starkov.EditConstants.Isolated",
   "OrderedSpecialFolders": [],
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
@@ -43,11 +47,11 @@
   "Versions": [
     {
       "Type": "SolutionMetadata",
-      "Number": 6
+      "Number": 8
     },
     {
       "Type": "ModuleMetadata",
-      "Number": 6
+      "Number": 8
     },
     {
       "Type": "DomainApi",

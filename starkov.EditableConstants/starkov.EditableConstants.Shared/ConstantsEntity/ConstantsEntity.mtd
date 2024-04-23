@@ -47,7 +47,7 @@
         {
           "$type": "Sungero.Metadata.ControlGroupMetadata, Sungero.Metadata",
           "NameGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
-          "Name": "ControlGroup",
+          "Name": "Main",
           "ColumnDefinitions": [
             {
               "Percentage": 50.0
@@ -132,7 +132,7 @@
           "HeaderLocation": "Top",
           "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
           "PropertyGuid": "f0a31b2a-49c2-4f64-b947-25f0cabd0333",
-          "RowNumber": 11,
+          "RowNumber": 14,
           "RowSpan": 1,
           "Settings": [
             {
@@ -192,7 +192,7 @@
           "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
           "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
           "PropertyGuid": "5e4dbfb3-08c4-4115-a0ca-247b7a0c46bc",
-          "RowNumber": 7,
+          "RowNumber": 9,
           "RowSpan": 1,
           "Settings": []
         },
@@ -205,7 +205,7 @@
           "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
           "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
           "PropertyGuid": "89f17228-4ce5-4967-bc60-a5139b0eee44",
-          "RowNumber": 8,
+          "RowNumber": 10,
           "RowSpan": 1,
           "Settings": []
         },
@@ -218,7 +218,7 @@
           "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
           "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
           "PropertyGuid": "2d00f5a2-ce86-4863-8dcf-49d564f9adc7",
-          "RowNumber": 8,
+          "RowNumber": 10,
           "RowSpan": 1,
           "Settings": []
         },
@@ -231,7 +231,7 @@
           "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
           "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
           "PropertyGuid": "de93c528-6601-4818-9f1a-47ce648cf962",
-          "RowNumber": 9,
+          "RowNumber": 11,
           "RowSpan": 1,
           "Settings": []
         },
@@ -244,7 +244,7 @@
           "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
           "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
           "PropertyGuid": "0db27bf6-4731-49a8-b293-4faee273dfce",
-          "RowNumber": 9,
+          "RowNumber": 11,
           "RowSpan": 1,
           "Settings": []
         },
@@ -270,7 +270,7 @@
           "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.TextEditorToTextBinder",
           "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
           "PropertyGuid": "87c647b5-fac5-4349-bf0a-0308959ef899",
-          "RowNumber": 10,
+          "RowNumber": 13,
           "RowSpan": 1,
           "Settings": [
             {
@@ -278,6 +278,58 @@
               "Value": 300
             }
           ]
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "47c49cbb-a3e5-442c-8cb5-d05deb58d85d",
+          "Name": "ValueDateTime",
+          "ColumnNumber": 0,
+          "ColumnSpan": 2,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
+          "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
+          "PropertyGuid": "36f4ab31-b6f3-4c8a-a191-078cd90a6e55",
+          "RowNumber": 7,
+          "RowSpan": 1,
+          "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "9c5d148b-d32c-4a73-a063-9336f8f4acb5",
+          "Name": "ValueLong",
+          "ColumnNumber": 0,
+          "ColumnSpan": 2,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+          "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
+          "PropertyGuid": "dfb1b822-526c-4c31-93f9-84af39d842f0",
+          "RowNumber": 8,
+          "RowSpan": 1,
+          "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "e3ca96ef-18fc-4d5a-9a32-49a8d02bf77f",
+          "Name": "ValueLongFrom",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+          "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
+          "PropertyGuid": "c5cf0a2a-6933-418e-877a-20b71dbcc44f",
+          "RowNumber": 12,
+          "RowSpan": 1,
+          "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "1261dea9-a743-4f7b-bdee-df2f54916dce",
+          "Name": "ValueLongBy",
+          "ColumnNumber": 1,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+          "ParentGuid": "90d1a2b6-2c49-47e0-8cd7-a06ed6a4afa4",
+          "PropertyGuid": "8cf20618-7ef2-4439-b0d8-5a2a804be7ae",
+          "RowNumber": 12,
+          "RowSpan": 1,
+          "Settings": []
         }
       ]
     }
@@ -376,34 +428,14 @@
           "Code": "ValString"
         },
         {
-          "NameGuid": "f2fb520d-1596-4f3c-b7d7-e704fefe7382",
-          "Name": "ValInt",
-          "Code": "ValInt"
-        },
-        {
-          "NameGuid": "38e2516c-8697-4c56-aac9-729b3d89baee",
-          "Name": "ValDouble",
-          "Code": "ValDouble"
-        },
-        {
-          "NameGuid": "354bed5b-c099-4d74-b2c9-e8b04c17ee85",
-          "Name": "ValBool",
-          "Code": "ValBool"
-        },
-        {
           "NameGuid": "39879a34-41df-473c-b51c-9cce7ce02eb0",
           "Name": "ValListString",
           "Code": "ValListString"
         },
         {
-          "NameGuid": "38af4073-32a8-42e9-9774-e259c176e6e1",
-          "Name": "ValListInt",
-          "Code": "ValListInt"
-        },
-        {
-          "NameGuid": "16188e54-4d2a-4760-b374-6e5ade3998c5",
-          "Name": "ValListDouble",
-          "Code": "ValListDouble"
+          "NameGuid": "f2fb520d-1596-4f3c-b7d7-e704fefe7382",
+          "Name": "ValInt",
+          "Code": "ValInt"
         },
         {
           "NameGuid": "55f82763-767f-4a38-93a6-9de5729b02dd",
@@ -411,9 +443,29 @@
           "Code": "ValRangeInt"
         },
         {
+          "NameGuid": "38af4073-32a8-42e9-9774-e259c176e6e1",
+          "Name": "ValListInt",
+          "Code": "ValListInt"
+        },
+        {
+          "NameGuid": "38e2516c-8697-4c56-aac9-729b3d89baee",
+          "Name": "ValDouble",
+          "Code": "ValDouble"
+        },
+        {
           "NameGuid": "4782e1dd-d0ac-489f-8dac-26337c6be298",
           "Name": "ValRangeDouble",
           "Code": "ValRangeDouble"
+        },
+        {
+          "NameGuid": "16188e54-4d2a-4760-b374-6e5ade3998c5",
+          "Name": "ValListDouble",
+          "Code": "ValListDouble"
+        },
+        {
+          "NameGuid": "354bed5b-c099-4d74-b2c9-e8b04c17ee85",
+          "Name": "ValBool",
+          "Code": "ValBool"
         },
         {
           "NameGuid": "8630ac1f-6a29-42ee-9c90-c18c1dfa053b",
@@ -424,6 +476,26 @@
           "NameGuid": "e3c6c4b6-dcb4-4b02-900b-1277b22c04fd",
           "Name": "ValText",
           "Code": "ValText"
+        },
+        {
+          "NameGuid": "b45bf44b-99e1-4ff2-b417-4d216cb140c7",
+          "Name": "ValDateTime",
+          "Code": "ValDateTime"
+        },
+        {
+          "NameGuid": "97659f04-b513-45a0-bd6c-c8392533987b",
+          "Name": "ValLong",
+          "Code": "ValLong"
+        },
+        {
+          "NameGuid": "3d9f7368-fe2d-4d39-ad76-b01a30c26fab",
+          "Name": "ValRangeLong",
+          "Code": "ValRangeLong"
+        },
+        {
+          "NameGuid": "03ce960c-dec0-487f-8ab9-6e36706f4dd8",
+          "Name": "ValListLong",
+          "Code": "ValListLong"
         }
       ],
       "IsEnabled": false,
@@ -450,6 +522,9 @@
       "NameGuid": "f411233e-5abc-416f-a2e0-735d7e8ee1c4",
       "Name": "Value",
       "Code": "Value",
+      "HandledEvents": [
+        "ChangedShared"
+      ],
       "IsEnabled": false,
       "IsVisibility": false,
       "Length": 1000,
@@ -577,6 +652,63 @@
       "IsVisibility": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToTextBinder",
       "PreviousPropertyGuid": "49c1ee67-3812-41f8-aa22-64034753e3de"
+    },
+    {
+      "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "36f4ab31-b6f3-4c8a-a191-078cd90a6e55",
+      "Name": "ValueDateTime",
+      "CanBeSearch": false,
+      "Code": "ValueDateTime",
+      "DateTimeFormat": "DateTime",
+      "HandledEvents": [
+        "ChangedShared"
+      ],
+      "IsShowedInList": false,
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
+      "PreviousPropertyGuid": "87c647b5-fac5-4349-bf0a-0308959ef899"
+    },
+    {
+      "$type": "Sungero.Metadata.LongIntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "dfb1b822-526c-4c31-93f9-84af39d842f0",
+      "Name": "ValueLong",
+      "CanBeSearch": false,
+      "Code": "ValueLong",
+      "HandledEvents": [
+        "ChangedShared"
+      ],
+      "IsShowedInList": false,
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "36f4ab31-b6f3-4c8a-a191-078cd90a6e55"
+    },
+    {
+      "$type": "Sungero.Metadata.LongIntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "c5cf0a2a-6933-418e-877a-20b71dbcc44f",
+      "Name": "ValueLongFrom",
+      "CanBeSearch": false,
+      "Code": "ValueLongFrom",
+      "HandledEvents": [
+        "ChangedShared"
+      ],
+      "IsShowedInList": false,
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "dfb1b822-526c-4c31-93f9-84af39d842f0"
+    },
+    {
+      "$type": "Sungero.Metadata.LongIntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "8cf20618-7ef2-4439-b0d8-5a2a804be7ae",
+      "Name": "ValueLongBy",
+      "CanBeSearch": false,
+      "Code": "ValueLongBy",
+      "HandledEvents": [
+        "ChangedShared"
+      ],
+      "IsShowedInList": false,
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "c5cf0a2a-6933-418e-877a-20b71dbcc44f"
     }
   ],
   "PublicStructures": [],
@@ -720,7 +852,7 @@
   "Versions": [
     {
       "Type": "EntityMetadata",
-      "Number": 9
+      "Number": 12
     },
     {
       "Type": "DomainApi",
