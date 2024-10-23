@@ -495,7 +495,7 @@ namespace starkov.EditableConstants.Server
     [Remote, Public]
     public virtual string GetValueTextByName(string name)
     {
-      return this.GetValueStringByName(name, true);
+      return this.GetValueTextByName(name, true);
     }
     
     /// <summary>
