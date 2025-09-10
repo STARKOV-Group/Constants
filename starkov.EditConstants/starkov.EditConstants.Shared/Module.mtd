@@ -26,7 +26,6 @@
     "Tabs": []
   },
   "DesktopViews": [],
-  "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "starkov.EditConstants",
@@ -36,7 +35,6 @@
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "starkov.EditConstants",
-  "ResourcesKeys": [],
   "ServerAssemblyName": "starkov.EditConstants.Server",
   "ServerNamespace": "starkov.EditConstants.Server",
   "SharedAssemblyName": "starkov.EditConstants.Shared",
@@ -47,11 +45,11 @@
   "Versions": [
     {
       "Type": "SolutionMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "ModuleMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "DomainApi",
