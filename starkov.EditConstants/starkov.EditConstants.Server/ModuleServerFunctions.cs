@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace starkov.EditConstants.Server
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
 	
   }
