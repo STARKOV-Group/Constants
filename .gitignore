@@ -35,3 +35,6 @@ _ConfigSettings.xml
 
 
 Libraries.json
+
+
+*.g.xml
