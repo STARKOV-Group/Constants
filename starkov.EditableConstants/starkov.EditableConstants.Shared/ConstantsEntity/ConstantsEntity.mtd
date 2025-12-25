@@ -347,6 +347,7 @@
   "IconResourcesKeys": [],
   "IsAutoCreated": true,
   "IsVisible": false,
+  "ListViewUuid": "338bff46-9500-4ffc-863d-1372f527f7d4",
   "OperationsClass": "",
   "Overridden": [
     "IsVisible",
