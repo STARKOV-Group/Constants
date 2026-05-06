@@ -1,0 +1,22 @@
+{
+  "Base64Group_Caption_1fa8894c516643068acb1112ae1a5bb2": {
+    "en-US": "Base64"
+  },
+  "Description": {},
+  "MainPage_Title_df8649cf98304b50a826fbe19ca2545d": {
+    "en-US": "Properties",
+    "ru-RU": "Свойства"
+  },
+  "Name": {
+    "en-US": "Constants",
+    "ru-RU": "Константы"
+  },
+  "NoteGroup_Caption_898d556d4efb494486847b82e5130cdc": {
+    "en-US": "Note",
+    "ru-RU": "Примечание"
+  },
+  "Send_Caption_ce274de502514b0c8f8d0c61cedf5611": {
+    "en-US": "Send",
+    "ru-RU": "Отправка"
+  }
+}
