@@ -38,3 +38,6 @@ Libraries.json
 
 
 *.g.xml
+
+
+*.lscache
