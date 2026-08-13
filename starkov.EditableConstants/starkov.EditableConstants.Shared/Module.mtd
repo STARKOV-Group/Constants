@@ -381,7 +381,7 @@
         {
           "Name": "constantValuesList",
           "ParameterType": "global::System.Collections.Generic.List<global::System.String>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.String]]"
         },
         {
           "Name": "note",
@@ -408,7 +408,7 @@
         {
           "Name": "constantValuesList",
           "ParameterType": "global::System.Collections.Generic.List<global::System.Int32>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.Int32]]"
         },
         {
           "Name": "note",
@@ -435,7 +435,7 @@
         {
           "Name": "constantValuesList",
           "ParameterType": "global::System.Collections.Generic.List<global::System.Double>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.Double]]"
         },
         {
           "Name": "note",
@@ -462,7 +462,7 @@
         {
           "Name": "constantValuesList",
           "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.Int64]]"
         },
         {
           "Name": "note",
@@ -555,7 +555,7 @@
       "IsRemote": true,
       "Placement": "Shared",
       "ReturnType": "global::System.Linq.IQueryable<global::starkov.EditableConstants.IConstantsEntity>",
-      "ReturnTypeFullName": "System.Linq.IQueryable"
+      "ReturnTypeFullName": "System.Linq.IQueryable`1[[starkov.EditableConstants.IConstantsEntity, Sungero.Domain.Interfaces]]"
     },
     {
       "Name": "GetValueBase64ByName",
@@ -626,7 +626,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.Boolean>",
-      "ReturnTypeFullName": "System.Nullable"
+      "ReturnTypeFullName": "System.Nullable`1[[System.Boolean]]"
     },
     {
       "Name": "GetValueBooleanByName",
@@ -645,7 +645,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.Boolean>",
-      "ReturnTypeFullName": "System.Nullable"
+      "ReturnTypeFullName": "System.Nullable`1[[System.Boolean]]"
     },
     {
       "Name": "GetValueDateTimeByName",
@@ -659,7 +659,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.DateTime>",
-      "ReturnTypeFullName": "System.Nullable"
+      "ReturnTypeFullName": "System.Nullable`1[[System.DateTime]]"
     },
     {
       "Name": "GetValueDateTimeByName",
@@ -678,7 +678,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.DateTime>",
-      "ReturnTypeFullName": "System.Nullable"
+      "ReturnTypeFullName": "System.Nullable`1[[System.DateTime]]"
     },
     {
       "Name": "GetValueDoubleByName",
@@ -692,7 +692,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.Double>",
-      "ReturnTypeFullName": "System.Nullable"
+      "ReturnTypeFullName": "System.Nullable`1[[System.Double]]"
     },
     {
       "Name": "GetValueDoubleByName",
@@ -711,7 +711,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.Double>",
-      "ReturnTypeFullName": "System.Nullable"
+      "ReturnTypeFullName": "System.Nullable`1[[System.Double]]"
     },
     {
       "Name": "GetValueIntByName",
@@ -725,7 +725,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.Int32>",
-      "ReturnTypeFullName": "System.Nullable"
+      "ReturnTypeFullName": "System.Nullable`1[[System.Int32]]"
     },
     {
       "Name": "GetValueIntByName",
@@ -744,7 +744,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.Int32>",
-      "ReturnTypeFullName": "System.Nullable"
+      "ReturnTypeFullName": "System.Nullable`1[[System.Int32]]"
     },
     {
       "Name": "GetValueListDoubleByName",
@@ -758,7 +758,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Collections.Generic.List<global::System.Double>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
+      "ReturnTypeFullName": "System.Collections.Generic.List`1[[System.Double]]"
     },
     {
       "Name": "GetValueListDoubleByName",
@@ -777,7 +777,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Collections.Generic.List<global::System.Double>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
+      "ReturnTypeFullName": "System.Collections.Generic.List`1[[System.Double]]"
     },
     {
       "Name": "GetValueListIntByName",
@@ -791,7 +791,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Collections.Generic.List<global::System.Int32>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
+      "ReturnTypeFullName": "System.Collections.Generic.List`1[[System.Int32]]"
     },
     {
       "Name": "GetValueListIntByName",
@@ -810,7 +810,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Collections.Generic.List<global::System.Int32>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
+      "ReturnTypeFullName": "System.Collections.Generic.List`1[[System.Int32]]"
     },
     {
       "Name": "GetValueListLongByName",
@@ -824,7 +824,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Collections.Generic.List<global::System.Int64>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
+      "ReturnTypeFullName": "System.Collections.Generic.List`1[[System.Int64]]"
     },
     {
       "Name": "GetValueListLongByName",
@@ -843,7 +843,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Collections.Generic.List<global::System.Int64>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
+      "ReturnTypeFullName": "System.Collections.Generic.List`1[[System.Int64]]"
     },
     {
       "Name": "GetValueListStringByName",
@@ -857,7 +857,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
+      "ReturnTypeFullName": "System.Collections.Generic.List`1[[System.String]]"
     },
     {
       "Name": "GetValueListStringByName",
@@ -876,7 +876,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
+      "ReturnTypeFullName": "System.Collections.Generic.List`1[[System.String]]"
     },
     {
       "Name": "GetValueLongByName",
@@ -890,7 +890,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.Int64>",
-      "ReturnTypeFullName": "System.Nullable"
+      "ReturnTypeFullName": "System.Nullable`1[[System.Int64]]"
     },
     {
       "Name": "GetValueLongByName",
@@ -909,7 +909,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.Int64>",
-      "ReturnTypeFullName": "System.Nullable"
+      "ReturnTypeFullName": "System.Nullable`1[[System.Int64]]"
     },
     {
       "Name": "GetValueRangeDoubleByName",
@@ -1346,7 +1346,7 @@
         {
           "Name": "listValue",
           "ParameterType": "global::System.Collections.Generic.List<global::System.Int32>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.Int32]]"
         }
       ],
       "Placement": "Shared",
@@ -1365,7 +1365,7 @@
         {
           "Name": "listValue",
           "ParameterType": "global::System.Collections.Generic.List<global::System.Int32>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.Int32]]"
         },
         {
           "Name": "genException",
@@ -1389,7 +1389,7 @@
         {
           "Name": "listValue",
           "ParameterType": "global::System.Collections.Generic.List<global::System.Double>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.Double]]"
         }
       ],
       "Placement": "Shared",
@@ -1408,7 +1408,7 @@
         {
           "Name": "listValue",
           "ParameterType": "global::System.Collections.Generic.List<global::System.Double>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.Double]]"
         },
         {
           "Name": "genException",
@@ -1432,7 +1432,7 @@
         {
           "Name": "listValue",
           "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.Int64]]"
         }
       ],
       "Placement": "Shared",
@@ -1451,7 +1451,7 @@
         {
           "Name": "listValue",
           "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.Int64]]"
         },
         {
           "Name": "genException",
@@ -1475,7 +1475,7 @@
         {
           "Name": "listValue",
           "ParameterType": "global::System.Collections.Generic.List<global::System.String>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.String]]"
         }
       ],
       "Placement": "Shared",
@@ -1494,7 +1494,7 @@
         {
           "Name": "listValue",
           "ParameterType": "global::System.Collections.Generic.List<global::System.String>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[System.String]]"
         },
         {
           "Name": "genException",
