@@ -15,7 +15,182 @@ namespace starkov.EditableConstants.Server
       InitializationLogger.Debug("Init: Старт инициализации модуля \"Константы\".");
       
       SetGrantRights();
+      TransferToParams();
     }
+    
+    #region Перенос Констант в Параметры
+    /// <summary>
+    /// Перенос существующих Констант на Параметры.
+    /// </summary>
+    public static void TransferToParams()
+    {
+      const string groupsDescription = "26.2: Перенесено в Группу параметров системы";
+      const string paramsDescription = "26.2: Перенесено в Параметр системы";
+      
+      var loggerTemplate = $"Init.EditableConstants: {{0}}";
+      
+      var constants = ConstantsEntities.GetAll(_ => _.Status == starkov.EditableConstants.ConstantsEntity.Status.Active
+                                               && (_.Note == null || _.Note != paramsDescription));
+      if (!constants.Any())
+      {
+        InitializationLogger.DebugFormat(loggerTemplate, "Отсутствуют Константы для переноса в Параметры");
+        return;
+      }
+      
+      var currentConstantGroups = ConstantsGroups.GetAll(_ => _.Status == starkov.EditableConstants.ConstantsGroup.Status.Active);
+      if (!currentConstantGroups.Any())
+        currentConstantGroups = constants.Select(_ => _.Group).Distinct();
+      
+      foreach (var constantGroup in currentConstantGroups)
+      {
+        var paramGroup = Sungero.Commons.ParametersGroups.Null;
+        if (constantGroup != null)
+        {
+          if (!Locks.TryLock(constantGroup))
+          {
+            InitializationLogger.DebugFormat(loggerTemplate, $"Группа Констант с ИД {constantGroup.Id} заблокирована, обработка пропущена");
+            continue;
+          }
+          
+          var note = constantGroup.Note;
+          paramGroup = GetOrCreateParamGroup(constantGroup, note);
+        }
+        
+        foreach (var constant in constants.Where(_ => Equals(_.Group, constantGroup)))
+        {
+          try
+          {
+            var param = GetOrCreateParam(constant, paramGroup);
+            
+            constant.AllowDelete = true;
+            constant.Note = paramsDescription;
+            constant.Status = starkov.EditableConstants.ConstantsEntity.Status.Closed;
+            UnsetEntityRequiredProperties(constant);
+            constant.Save();
+            
+            InitializationLogger.DebugFormat(loggerTemplate, $"Константа с ИД {constant.Id} закрыта");
+          }
+          catch (Exception ex)
+          {
+            Logger.ErrorFormat(loggerTemplate, ex, $"Не удалось сохранить Константу с ИД {constant.Id}");
+          }
+        }
+        
+        if (constantGroup != null)
+        {
+          try
+          {
+            constantGroup.Note = groupsDescription;
+            constantGroup.Status = starkov.EditableConstants.ConstantsGroup.Status.Closed;
+            UnsetEntityRequiredProperties(constantGroup);
+            constantGroup.Save();
+            
+            InitializationLogger.DebugFormat(loggerTemplate, $"Группа Констант с ИД {constantGroup.Id} закрыта");
+          }
+          catch (Exception ex)
+          {
+            Logger.ErrorFormat(loggerTemplate, ex, $"Не удалось сохранить Группу Констант с ИД {constantGroup.Id}");
+          }
+        }
+      }
+    }
+    
+    /// <summary>
+    /// Создать или найти параметр.
+    /// </summary>
+    /// <param name="constantsGroup"></param>
+    /// <returns></returns>
+    private static Sungero.Commons.IParameter GetOrCreateParam(IConstantsEntity constantEntity,
+                                                               Sungero.Commons.IParametersGroup parametersGroup)
+    {
+      Enumeration? valueType = constantEntity.TypeValue == EditableConstants.ConstantsEntity.TypeValue.ValBool ? Sungero.Commons.Parameter.ValueType.BooleanValue :
+        constantEntity.TypeValue == EditableConstants.ConstantsEntity.TypeValue.ValDateTime                    ? Sungero.Commons.Parameter.ValueType.DateValue    :
+        constantEntity.TypeValue == EditableConstants.ConstantsEntity.TypeValue.ValDouble                      ? Sungero.Commons.Parameter.ValueType.DoubleValue  :
+        constantEntity.TypeValue == EditableConstants.ConstantsEntity.TypeValue.ValInt                         ? Sungero.Commons.Parameter.ValueType.IntegerValue :
+        
+        constantEntity.TypeValue == EditableConstants.ConstantsEntity.TypeValue.ValString                      ? Sungero.Commons.Parameter.ValueType.StringValue  :
+        constantEntity.TypeValue == EditableConstants.ConstantsEntity.TypeValue.ValText                        ? Sungero.Commons.Parameter.ValueType.StringValue  :
+        
+        null;
+      
+      if (valueType == null)
+        throw AppliedCodeException.Create("Константа ИД {constantEntity.Id} пропущена, т.к. тип значения '{constantEntity.TypeValue}' не поддерживается.");
+      
+      var param = Sungero.Commons.Parameters.GetAll(_ => _.Code == constantEntity.Name).FirstOrDefault();
+      if (param != null && param.ValueType != valueType)
+        throw AppliedCodeException.Create("Константа ИД {constantEntity.Id} пропущена, т.к. найден Параметр ИД {param.Id} с другим типом значения '{constantEntity.TypeValue}'.");
+      
+      if (param == null)
+      {
+        param = Sungero.Commons.Parameters.Create();
+        param.Name = constantEntity.Name;
+        param.Code = constantEntity.Name;
+        param.Note = constantEntity.Note;
+        param.ValueType = valueType;
+        param.Group = parametersGroup;
+        
+        if (param.ValueType == Sungero.Commons.Parameter.ValueType.BooleanValue)
+          param.BooleanValue = constantEntity.ValueBool;
+        
+        else if (param.ValueType == Sungero.Commons.Parameter.ValueType.DateValue)
+          param.DateValue = constantEntity.ValueDateTime;
+        
+        else if (param.ValueType == Sungero.Commons.Parameter.ValueType.DoubleValue)
+          param.DoubleValue = constantEntity.ValueDouble;
+        
+        else if (param.ValueType == Sungero.Commons.Parameter.ValueType.IntegerValue)
+          param.IntegerValue = constantEntity.ValueInt;
+        
+        else if (param.ValueType == Sungero.Commons.Parameter.ValueType.StringValue)
+          param.StringValue = constantEntity.TypeValue == EditableConstants.ConstantsEntity.TypeValue.ValString
+            ? constantEntity.ValueString
+            : constantEntity.ValueText;
+        
+        UnsetEntityRequiredProperties(param);
+        param.Save();
+        
+        InitializationLogger.Debug($"Init.EditableConstants: Создан Параметр ИД {param.Id} из Константы (ИД {constantEntity.Id})");
+      }
+      
+      return param;
+    }
+    
+    /// <summary>
+    /// Создать или найти группу параметров.
+    /// </summary>
+    /// <param name="constantsGroup"></param>
+    /// <returns></returns>
+    private static Sungero.Commons.IParametersGroup GetOrCreateParamGroup(IConstantsGroup constantsGroup, string note)
+    {
+      var paramGroup = Sungero.Commons.ParametersGroups.GetAll(_ => _.Name == constantsGroup.Name).FirstOrDefault();
+      if (paramGroup == null)
+      {
+        paramGroup = Sungero.Commons.ParametersGroups.Create();
+        paramGroup.Name = constantsGroup.Name;
+        paramGroup.Note = note;
+        
+        UnsetEntityRequiredProperties(paramGroup);
+        paramGroup.Save();
+        
+        InitializationLogger.Debug($"Init.EditableConstants: Создана Группа Параметров ИД {paramGroup.Id} из Группы Констант (ИД {constantsGroup.Id})");
+      }
+      
+      return paramGroup;
+    }
+    
+    /// <summary>
+    /// Снять обязательность свойств.
+    /// </summary>
+    /// <param name="entity"></param>
+    private static void UnsetEntityRequiredProperties(Sungero.Domain.Shared.IEntity entity)
+    {
+      if (entity == null)
+        return;
+      
+      foreach (var p in entity.State.Properties)
+        p.IsRequired = false;
+    }
+    #endregion
     
     #region Создание записей справочника "Константы"
     
@@ -47,7 +222,7 @@ namespace starkov.EditableConstants.Server
     }
     
     #endregion
-           
+    
     
     #region Создание групп констант
     
