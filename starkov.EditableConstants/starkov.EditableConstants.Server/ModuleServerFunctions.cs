@@ -63,7 +63,7 @@ namespace starkov.EditableConstants.Server
     /// </summary>
     /// <param name="name">Имя константы.</param>
     /// <returns>Значение константы, если константа не найдена, то string.Empty.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual string GetValueStringByName(string name)
     {
       return this.GetValueStringByName(name, true);
@@ -75,7 +75,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>Значение константы, если константа не найдена, то string.Empty.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual string GetValueStringByName(string name, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -101,7 +101,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="constValue">Новое значение константы.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueStringByName(string name, string constValue)
     {
       return this.SetValueStringByName(name, constValue, true);
@@ -114,7 +114,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="constValue">Новое значение константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueStringByName(string name, string constValue, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -148,7 +148,7 @@ namespace starkov.EditableConstants.Server
     /// </summary>
     /// <param name="name">Имя константы.</param>
     /// <returns>Значение константы, если константа не найдена, то null.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual int? GetValueIntByName(string name)
     {
       return this.GetValueIntByName(name, true);
@@ -160,7 +160,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>Значение константы, если константа не найдена, то null.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual int? GetValueIntByName(string name, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -187,7 +187,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="constValue">Новое значение константы.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueIntByName(string name, int constValue)
     {
       return this.SetValueIntByName(name, constValue, true);
@@ -200,7 +200,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="constValue">Новое значение константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueIntByName(string name, int constValue, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -319,7 +319,7 @@ namespace starkov.EditableConstants.Server
     /// </summary>
     /// <param name="name">Имя константы.</param>
     /// <returns>Значение константы, если константа не найдена, то null.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual double? GetValueDoubleByName(string name)
     {
       return this.GetValueDoubleByName(name, true);
@@ -331,7 +331,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>Значение константы, если константа не найдена, то null.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual double? GetValueDoubleByName(string name, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -358,7 +358,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="constValue">Новое значение константы.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueDoubleByName(string name, double constValue)
     {
       return this.SetValueDoubleByName(name, constValue, true);
@@ -371,7 +371,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="constValue">Новое значение константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueDoubleByName(string name, double constValue, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -405,7 +405,7 @@ namespace starkov.EditableConstants.Server
     /// </summary>
     /// <param name="name">Имя константы.</param>
     /// <returns>Значение константы, если константа не найдена, то null.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool? GetValueBooleanByName(string name)
     {
       return this.GetValueBooleanByName(name, true);
@@ -417,7 +417,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>Значение константы, если константа не найдена, то null.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool? GetValueBooleanByName(string name, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -444,7 +444,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="constValue">Новое значение константы.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueBooleanByName(string name, bool constValue)
     {
       return this.SetValueBooleanByName(name, constValue, true);
@@ -458,7 +458,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="constValue">Новое значение константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueBooleanByName(string name, bool constValue, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -492,7 +492,7 @@ namespace starkov.EditableConstants.Server
     /// </summary>
     /// <param name="name">Имя константы.</param>
     /// <returns>Значение константы, если константа не найдена, то string.Empty.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual string GetValueTextByName(string name)
     {
       return this.GetValueTextByName(name, true);
@@ -504,7 +504,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>Значение константы, если константа не найдена, то string.Empty.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual string GetValueTextByName(string name, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -530,7 +530,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="constValue">Новое значение константы.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueTextByName(string name, string constValue)
     {
       return this.SetValueStringByName(name, constValue, true);
@@ -543,7 +543,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="constValue">Новое значение константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueTextByName(string name, string constValue, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -577,7 +577,7 @@ namespace starkov.EditableConstants.Server
     /// </summary>
     /// <param name="name">Имя константы.</param>
     /// <returns>Значение константы, если константа не найдена, то null.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual DateTime? GetValueDateTimeByName(string name)
     {
       return this.GetValueDateTimeByName(name, true);
@@ -589,7 +589,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>Значение константы, если константа не найдена, то null.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual DateTime? GetValueDateTimeByName(string name, bool genException)
     {
       string subjectError = Resources.SubjectError;
@@ -616,7 +616,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="name">Имя константы.</param>
     /// <param name="constValue">Новое значение константы.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueDateTimeByName(string name, DateTime constValue)
     {
       return this.SetValueDateTimeByName(name, constValue, true);
@@ -629,7 +629,7 @@ namespace starkov.EditableConstants.Server
     /// <param name="constValue">Новое значение константы.</param>
     /// <param name="genException">Генерировать исключения.</param>
     /// <returns>True - если значение установлено, иначе - False.</returns>
-    [Remote, Public]
+    [Remote, Public, Obsolete("С 26.2 перенесено на Parameters.")]
     public virtual bool SetValueDateTimeByName(string name, DateTime constValue, bool genException)
     {
       string subjectError = Resources.SubjectError;
