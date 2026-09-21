@@ -30,7 +30,7 @@ namespace starkov.EditableConstants.Server
       var loggerTemplate = $"Init.EditableConstants: {{0}}";
       
       var constants = ConstantsEntities.GetAll(_ => _.Status == starkov.EditableConstants.ConstantsEntity.Status.Active
-                                               && (_.Note == null || _.Note != paramsDescription));
+                                               && (_.Note == null || _.Note != Constants.Module.ParamsTransferedDescription));
       if (!constants.Any())
       {
         InitializationLogger.DebugFormat(loggerTemplate, "Отсутствуют Константы для переноса в Параметры");
@@ -63,7 +63,7 @@ namespace starkov.EditableConstants.Server
             var param = GetOrCreateParam(constant, paramGroup);
             
             constant.AllowDelete = true;
-            constant.Note = paramsDescription;
+            constant.Note = Constants.Module.ParamsTransferedDescription;
             constant.Status = starkov.EditableConstants.ConstantsEntity.Status.Closed;
             UnsetEntityRequiredProperties(constant);
             constant.Save();
@@ -80,7 +80,7 @@ namespace starkov.EditableConstants.Server
         {
           try
           {
-            constantGroup.Note = groupsDescription;
+            constantGroup.Note = Constants.Module.GroupsTransferedDescription;
             constantGroup.Status = starkov.EditableConstants.ConstantsGroup.Status.Closed;
             UnsetEntityRequiredProperties(constantGroup);
             constantGroup.Save();

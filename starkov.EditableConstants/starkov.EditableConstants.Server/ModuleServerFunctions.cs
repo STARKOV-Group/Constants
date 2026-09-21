@@ -9,6 +9,27 @@ namespace starkov.EditableConstants.Server
   public partial class ModuleFunctions
   {
 
+    /// <summary>
+    /// 
+    /// </summary>
+    public static void CloseOldConstants(List<Sungero.Commons.Structures.Parameter.IParameterStructure> parameters)
+    {
+      foreach (var param in parameters)
+      {
+        
+      }
+    }
+    
+     /// <summary>
+    /// 
+    /// </summary>
+    public static void CloseOldConstantsGroups(List<Sungero.Commons.Structures.ParametersGroup.IParametersGroupStructure> groups)
+    {
+      
+      
+      
+    }
+
     #region	Работа с константами
     
     #region Работа со значениями констант
