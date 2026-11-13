@@ -32,9 +32,11 @@
   "IsolatedAssemblyName": "starkov.EditConstants.Isolated",
   "IsolatedNamespace": "starkov.EditConstants.Isolated",
   "OrderedSpecialFolders": [],
+  "OverrideSuffix": "starkov",
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "starkov.EditConstants",
+  "ResourcesKeys": [],
   "ServerAssemblyName": "starkov.EditConstants.Server",
   "ServerNamespace": "starkov.EditConstants.Server",
   "SharedAssemblyName": "starkov.EditConstants.Shared",
@@ -45,7 +47,7 @@
   "Versions": [
     {
       "Type": "SolutionMetadata",
-      "Number": 12
+      "Number": 13
     },
     {
       "Type": "ModuleMetadata",

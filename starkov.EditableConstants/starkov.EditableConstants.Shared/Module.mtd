@@ -546,8 +546,8 @@
   "IsolatedNamespace": "starkov.EditableConstants.Isolated",
   "IsVisible": false,
   "Overridden": [
-    "IsVisible",
-    "Importance"
+    "Importance",
+    "IsVisible"
   ],
   "PublicFunctions": [
     {

@@ -112,9 +112,9 @@
         "Index": 51,
         "IsAncestorMetadata": true,
         "Overridden": [
-          "IsVisible",
           "ButtonSize",
-          "Index"
+          "Index",
+          "IsVisible"
         ],
         "ParentGuid": "f3b0ddcd-9d1e-4ca3-8780-695ae25a9e8b"
       }
